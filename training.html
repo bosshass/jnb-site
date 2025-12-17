@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-63CXJJJX7E"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-63CXJJJX7E');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training & Resources | JNB LLC</title>
+    <meta name="description" content="Free training materials for small business owners. Financial literacy, operations, pricing, hiring, and more. Learn to understand your numbers.">
+    <meta property="og:image" content="https://jnbservice.com/JNB_LLC_OFFICIAL_LOGO_2026.png">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --teal: #1a8a8a;
+            --teal-dark: #156b6b;
+            --teal-light: #e8f4f4;
+            --black: #1a1a1a;
+            --white: #ffffff;
+            --gray-50: #fafafa;
+            --gray-100: #f5f5f5;
+            --gray-200: #e5e5e5;
+            --gray-400: #a3a3a3;
+            --gray-600: #525252;
+            --serif: 'Cormorant Garamond', Georgia, serif;
+            --sans: 'Outfit', -apple-system, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--sans);
+            font-weight: 400;
+            color: var(--black);
+            background: var(--white);
+            line-height: 1.6;
+            font-size: 17px;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--gray-200);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--black);
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        .logo-text {
+            font-family: var(--serif);
+            font-size: 1.5rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--gray-600);
+            font-size: 0.95rem;
+            font-weight: 400;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--teal);
+        }
+
+        .nav-cta {
+            background: var(--teal);
+            color: var(--white) !important;
+            padding: 0.6rem 1.25rem;
+            border-radius: 6px;
+            transition: background 0.2s ease !important;
+        }
+
+        .nav-cta:hover {
+            background: var(--teal-dark) !important;
+        }
+
+        /* Page Header */
+        .page-header {
+            padding: 10rem 2rem 4rem;
+            background: linear-gradient(165deg, var(--white) 0%, var(--teal-light) 100%);
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-family: var(--serif);
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 500;
+            margin-bottom: 1rem;
+            color: var(--black);
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            color: var(--gray-600);
+            font-weight: 300;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Email Gate */
+        .email-gate {
+            background: var(--white);
+            padding: 3rem 2rem;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .email-gate-content {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .email-gate h2 {
+            font-family: var(--serif);
+            font-size: 1.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .email-gate p {
+            color: var(--gray-600);
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+
+        .email-form {
+            display: flex;
+            gap: 0.75rem;
+            max-width: 450px;
+            margin: 0 auto;
+        }
+
+        .email-form input[type="email"] {
+            flex: 1;
+            padding: 0.9rem 1.25rem;
+            border: 1px solid var(--gray-200);
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: var(--sans);
+            transition: border-color 0.2s ease;
+        }
+
+        .email-form input[type="email"]:focus {
+            outline: none;
+            border-color: var(--teal);
+        }
+
+        .email-form button {
+            background: var(--teal);
+            color: var(--white);
+            border: none;
+            padding: 0.9rem 1.5rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s ease;
+            font-family: var(--sans);
+        }
+
+        .email-form button:hover {
+            background: var(--teal-dark);
+        }
+
+        .email-note {
+            font-size: 0.85rem;
+            color: var(--gray-400);
+            margin-top: 1rem;
+        }
+
+        /* Content - Hidden by default */
+        .training-content {
+            display: none;
+            padding: 4rem 2rem;
+        }
+
+        .training-content.unlocked {
+            display: block;
+        }
+
+        .training-section {
+            max-width: 900px;
+            margin: 0 auto 4rem;
+        }
+
+        .training-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .training-section h2 {
+            font-family: var(--serif);
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: var(--black);
+        }
+
+        .training-section > p {
+            color: var(--gray-600);
+            font-weight: 300;
+            margin-bottom: 2rem;
+        }
+
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .resource-card {
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: 12px;
+            padding: 1.75rem;
+            transition: all 0.2s ease;
+        }
+
+        .resource-card:hover {
+            border-color: var(--teal);
+            box-shadow: 0 4px 20px rgba(26, 138, 138, 0.1);
+        }
+
+        .resource-type {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--teal);
+            background: var(--teal-light);
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            margin-bottom: 0.75rem;
+        }
+
+        .resource-card h3 {
+            font-family: var(--serif);
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: var(--black);
+        }
+
+        .resource-card p {
+            font-size: 0.9rem;
+            color: var(--gray-600);
+            font-weight: 300;
+            margin-bottom: 1.25rem;
+            line-height: 1.6;
+        }
+
+        .resource-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            color: var(--teal);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: gap 0.2s ease;
+        }
+
+        .resource-download:hover {
+            gap: 0.6rem;
+        }
+
+        .resource-download svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        /* Locked State */
+        .locked-overlay {
+            padding: 6rem 2rem;
+            text-align: center;
+            background: var(--gray-50);
+        }
+
+        .locked-overlay.hidden {
+            display: none;
+        }
+
+        .locked-overlay svg {
+            width: 64px;
+            height: 64px;
+            color: var(--gray-400);
+            margin-bottom: 1.5rem;
+        }
+
+        .locked-overlay h2 {
+            font-family: var(--serif);
+            font-size: 1.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .locked-overlay p {
+            color: var(--gray-600);
+            font-weight: 300;
+        }
+
+        /* CTA Section */
+        .training-cta {
+            background: var(--teal);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .training-cta h2 {
+            font-family: var(--serif);
+            font-size: 2rem;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .training-cta p {
+            color: rgba(255,255,255,0.85);
+            font-weight: 300;
+            margin-bottom: 2rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .training-cta a {
+            display: inline-block;
+            background: var(--white);
+            color: var(--teal);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .training-cta a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--gray-50);
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 1px solid var(--gray-200);
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-logo img {
+            height: 70px;
+        }
+
+        .footer-tagline {
+            color: var(--gray-600);
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-legal {
+            color: var(--gray-400);
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .email-form {
+                flex-direction: column;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="JNB_LLC_OFFICIAL_LOGO_2026.png" alt="JNB LLC">
+            <span class="logo-text">JNB</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="training.html">Training</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html" class="nav-cta">Let's Talk</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-header">
+        <h1>Training & Resources</h1>
+        <p>Real lessons from real business problems. No fluff, no theory that doesn't work in practice.</p>
+    </header>
+
+    <section class="email-gate" id="email-gate">
+        <div class="email-gate-content">
+            <h2>Get instant access</h2>
+            <p>Enter your email to unlock all training materials. No spam, just resources.</p>
+            <form class="email-form" id="access-form" action="https://formspree.io/f/xblnnldn" method="POST">
+                <input type="email" placeholder="you@company.com" required>
+                <button type="submit">Unlock</button>
+            </form>
+            <p class="email-note">We'll occasionally send new resources. Unsubscribe anytime.</p>
+        </div>
+    </section>
+
+    <div class="locked-overlay" id="locked-overlay">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+        </svg>
+        <h2>Enter your email above to access</h2>
+        <p>All training materials will be unlocked instantly.</p>
+    </div>
+
+    <div class="training-content" id="training-content">
+        <section class="training-section">
+            <h2>Financial Literacy Series</h2>
+            <p>The fundamentals of understanding your business numbers. Start here if spreadsheets make your eyes glaze over.</p>
+            <div class="resource-grid">
+                <div class="resource-card">
+                    <span class="resource-type">PDF</span>
+                    <h3>Lesson 1: Financial Literacy Basics</h3>
+                    <p>The foundation. What numbers actually matter and why you should care about them.</p>
+                    <a href="Lessons/Lesson_1_Financial_Literacy_JNB_FinalPolish_v2.pdf" class="resource-download" download>
+                        Download
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="resource-card">
+                    <span class="resource-type">PDF</span>
+                    <h3>Lesson 2: Reading Your Reports</h3>
+                    <p>How to look at a P&L or balance sheet without wanting to throw your laptop.</p>
+                    <a href="Lessons/Lesson_2_Financial_Literacy_JNB_FinalPolish.pdf" class="resource-download" download>
+                        Download
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="resource-card">
+                    <span class="resource-type">PDF</span>
+                    <h3>Lesson 3: Cash Flow Reality</h3>
+                    <p>Why profitable businesses run out of money and how to make sure yours doesn't.</p>
+                    <a href="Lessons/Lesson_3_Financial_Literacy_JNB_FinalPolish.pdf" class="resource-download" download>
+                        Download
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="resource-card">
+                    <span class="resource-type">PDF</span>
+                    <h3>Lesson 4: Margins & Markup</h3>
+                    <p>The math behind pricing that actually makes you money.</p>
+                    <a href="Lessons/Lesson_4_Financial_Literacy_JNB_FinalPolish.pdf" class="resource-download" download>
+                        Download
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="resource-card">
+                    <span class="resource-type">PDF</span>
+                    <h3>Lesson 5: Breakeven & Beyond</h3>
+                    <p>How much do you need to sell to cover your costs? And what happens after that?</p>
+                    <a href="Lessons/Lesson_5_Financial_Literacy_JNB_FinalPolish.pdf" class="resource-download" download>
+                        Download
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="resource-card">
+                    <span class="resource-type">PDF</span>
+                    <h3>Lesson 6: Turning Numbers Into Decisions</h3>
+                    <p>The whole point. How to use what you've learned to actually make better choices.</p>
+                    <a href="Lessons/Lesson_6_Turning_Numbers_Into_Decisions_JNB_WithCTA.pdf" class="resource-download" download>
+                        Download
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="resource-card">
+                    <span class="resource-type">Guide</span>
+                    <h3>How Much Should I Pay Myself?</h3>
+                    <p>The question every business owner asks. Here's how to figure out the answer.</p>
+                    <a href="Lessons/Lesson_4_How_Much_Should_I_Pay_Myself_JNBLLC.docx" class="resource-download" download>
+                        Download
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="resource-card">
+                    <span class="resource-type">Reference</span>
+                    <h3>Profit & Loss Explained</h3>
+                    <p>A plain-English breakdown of what's on your P&L and what it means.</p>
+                    <a href="Lessons/Profit and Loss_.docx" class="resource-download" download>
+                        Download
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="training-section">
+            <h2>Operations Series</h2>
+            <p>The business side of running a business. Pricing, labor, capacity, and making it all work together.</p>
+            <div class="resource-grid">
+                <div class="resource-card">
+                    <span class="resource-type">PDF</span>
+                    <h3>Ops 1: Costs and Pricing</h3>
+                    <p>Understanding what things actually cost so you can price them right.</p>
+                    <a href="Lessons/Ops_1_Costs_and_Pricing_JNB_v2.pdf" class="resource-download" download>
+                        Download
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="resource-card">
+                    <span class="resource-type">PDF</span>
+                    <h3>Ops 2: Labor Math and Rates</h3>
+                    <p>What your people actually cost and how to build rates around it.</p>
+                    <a href="Lessons/Ops_2_Labor_Math_and_Rates_JNB_v2.pdf" class="resource-download" download>
+                        Download
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="resource-card">
+                    <span class="resource-type">PDF</span>
+                    <h3>Ops 3: Client Underutilization</h3>
+                    <p>When your team isn't busy enough - and what to do about it.</p>
+                    <a href="Lessons/Ops_3_Client_Underutilization_JNB_v2.pdf" class="resource-download" download>
+                        Download
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="resource-card">
+                    <span class="resource-type">PDF</span>
+                    <h3>Ops 4: Fixed Fee Change Orders</h3>
+                    <p>How to handle scope creep without losing money or clients.</p>
+                    <a href="Lessons/Ops_4_Fixed_Fee_Change_Orders_JNB.pdf" class="resource-download" download>
+                        Download
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="resource-card">
+                    <span class="resource-type">PDF</span>
+                    <h3>Ops 5: Capacity & Hiring</h3>
+                    <p>When to hire, how to plan for it, and how to know if you're ready.</p>
+                    <a href="Lessons/Ops_5_Capacity_Hiring_JNB.pdf" class="resource-download" download>
+                        Download
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="training-section">
+            <h2>Tools & Playbooks</h2>
+            <p>Practical tools you can use right now. Not theory - actual spreadsheets and frameworks.</p>
+            <div class="resource-grid">
+                <div class="resource-card">
+                    <span class="resource-type">Playbook</span>
+                    <h3>The Utilization & Capacity Playbook</h3>
+                    <p>A complete framework for understanding how busy your team is and planning for growth.</p>
+                    <a href="Lessons/The Utilization & Capacity Playbook.docx" class="resource-download" download>
+                        Download
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="resource-card">
+                    <span class="resource-type">Spreadsheet</span>
+                    <h3>Resource Utilization Calculator</h3>
+                    <p>Plug in your numbers, see your utilization. Includes a sample so you can see how it works.</p>
+                    <a href="Lessons/Resource_Utilization_Calculator_JNB_SampleFilled.xlsx" class="resource-download" download>
+                        Download
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section class="training-cta">
+        <h2>Ready for more than self-study?</h2>
+        <p>These resources are a great start. But if you want someone to help you apply them to your specific situation, that's what we do.</p>
+        <a href="contact.html">Let's Talk</a>
+    </section>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="JNB_LLC_OFFICIAL_LOGO_2026.png" alt="JNB LLC">
+        </div>
+        <p class="footer-tagline">We make the numbers make sense.</p>
+        
+        <p class="footer-legal">© 2026 JNB LLC. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Check if already unlocked
+        if (localStorage.getItem('jnb_access') === 'true') {
+            document.getElementById('email-gate').style.display = 'none';
+            document.getElementById('locked-overlay').classList.add('hidden');
+            document.getElementById('training-content').classList.add('unlocked');
+        }
+
+        // Handle form submission - send to Formspree AND unlock content
+        document.getElementById('access-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input[type="email"]').value;
+            const formData = new FormData();
+            formData.append('email', email);
+            
+            // Send to Formspree in background
+            fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+            
+            // Unlock content immediately
+            localStorage.setItem('jnb_access', 'true');
+            localStorage.setItem('jnb_email', email);
+            
+            document.getElementById('email-gate').style.display = 'none';
+            document.getElementById('locked-overlay').classList.add('hidden');
+            document.getElementById('training-content').classList.add('unlocked');
+            
+            // Scroll to content
+            document.getElementById('training-content').scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>

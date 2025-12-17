@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-63CXJJJX7E"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-63CXJJJX7E');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Spire Lesson: Why Teachable Work Wins | JNB LLC</title>
+    <meta name="description" content="The turning point that built JNB — how being almost fired for not being scalable taught the value of building teachable systems that grow beyond you.">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --teal: #1a8a8a;
+            --teal-dark: #156b6b;
+            --teal-light: #e8f4f4;
+            --black: #1a1a1a;
+            --white: #ffffff;
+            --gray-50: #fafafa;
+            --gray-200: #e5e5e5;
+            --gray-400: #a3a3a3;
+            --gray-600: #525252;
+            --serif: 'Cormorant Garamond', Georgia, serif;
+            --sans: 'Outfit', -apple-system, sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--sans); font-weight: 400; color: var(--black); background: var(--white); line-height: 1.6; font-size: 17px; }
+        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--gray-200); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: var(--black); }
+        .logo img { height: 50px; }
+        .logo-text { font-family: var(--serif); font-size: 1.5rem; font-weight: 500; }
+        .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+        .nav-links a { text-decoration: none; color: var(--gray-600); font-size: 0.95rem; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--teal); }
+        .nav-cta { background: var(--teal); color: var(--white) !important; padding: 0.6rem 1.25rem; border-radius: 6px; }
+        .nav-cta:hover { background: var(--teal-dark) !important; }
+
+        .blog-header {
+            padding: 10rem 2rem 3rem;
+            background: linear-gradient(165deg, var(--white) 0%, var(--teal-light) 100%);
+        }
+        .blog-header-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .blog-meta {
+            font-size: 0.9rem;
+            color: var(--gray-600);
+            margin-bottom: 1rem;
+        }
+        .blog-header h1 {
+            font-family: var(--serif);
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 500;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+        .blog-subtitle {
+            font-size: 1.15rem;
+            color: var(--gray-600);
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        .blog-content {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 3rem 2rem 5rem;
+        }
+        .blog-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: var(--gray-600);
+            font-weight: 300;
+        }
+        .blog-content h2 {
+            font-family: var(--serif);
+            font-size: 1.75rem;
+            font-weight: 500;
+            margin: 3rem 0 1.5rem;
+            color: var(--black);
+        }
+        .blog-content strong {
+            color: var(--black);
+            font-weight: 500;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--teal);
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 2rem;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .highlight-box {
+            background: var(--teal-light);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .highlight-box p {
+            margin-bottom: 0;
+            font-family: var(--serif);
+            font-size: 1.35rem;
+            color: var(--black);
+            font-style: italic;
+            line-height: 1.5;
+        }
+
+        .blog-cta {
+            background: var(--gray-50);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+        .blog-cta h3 {
+            font-family: var(--serif);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .blog-cta p {
+            margin-bottom: 1.5rem;
+        }
+        .blog-cta a {
+            display: inline-block;
+            background: var(--teal);
+            color: var(--white);
+            padding: 0.9rem 1.75rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        .blog-cta a:hover {
+            background: var(--teal-dark);
+        }
+
+        footer { background: var(--gray-50); padding: 3rem 2rem; text-align: center; border-top: 1px solid var(--gray-200); }
+        .footer-logo { display: flex; align-items: center; justify-content: center; gap: 0.75rem; margin-bottom: 1rem; }
+        .footer-logo img { height: 70px; }
+        .footer-tagline { color: var(--gray-600); font-weight: 300; margin-bottom: 1.5rem; }
+        .footer-legal { color: var(--gray-400); font-size: 0.85rem; }
+
+        @media (max-width: 600px) { .nav-links { display: none; } .blog-header { padding: 7rem 1.5rem 2rem; } }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="JNB_LLC_OFFICIAL_LOGO_2026.png" alt="JNB LLC">
+            <span class="logo-text">JNB</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="training.html">Training</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html" class="nav-cta">Let's Talk</a></li>
+        </ul>
+    </nav>
+
+    <header class="blog-header">
+        <div class="blog-header-content">
+            <div class="blog-meta">Sara Hass</div>
+            <h1>The Spire Lesson: Why Teachable Work Wins</h1>
+            <p class="blog-subtitle">What I learned when I became the bottleneck.</p>
+        </div>
+    </header>
+
+    <article class="blog-content">
+        <a href="blog.html" class="back-link">← Back to all posts</a>
+
+        <p>Years ago, at a company called Spire, I thought I was doing everything right. I worked hard, stayed late, solved every problem myself. I built the systems, handled the clients, and kept things running. I thought that made me valuable.</p>
+
+        <p><strong>Then I almost got fired.</strong></p>
+
+        <p>Not because I wasn't performing — but because I wasn't scalable. I couldn't hire. I couldn't train. Everything lived in my head, and that meant everything stopped with me.</p>
+
+        <p>At first, I was furious. I felt misunderstood, underappreciated. I held a grudge for a long time. But eventually, I realized something that changed the way I build everything now: they weren't wrong.</p>
+
+        <h2>The Hard Truth</h2>
+
+        <p>The truth was that I had made myself the system. I was good at what I did — maybe too good — and I hadn't created a way for anyone else to step in, learn it, or carry it forward. Every task, every client, every decision had to pass through me.</p>
+
+        <p><strong>That's not leadership. That's survival. And survival doesn't scale.</strong></p>
+
+        <p>When I look back now, I can see how much pressure I put on myself, trying to hold it all together. I wanted things to be perfect, to stay efficient, to keep the quality high — but in chasing that, I built a bottleneck instead of a business.</p>
+
+        <h2>The Moment Everything Clicked</h2>
+
+        <p>There was a conversation with the COO — one that ended in termination from his team — that stuck with me long after I left. I had been angry, embarrassed, maybe even defensive. But later, I called to apologize. I told him I finally understood what he was trying to teach me.</p>
+
+        <p>It wasn't about working harder. It was about building something that others could work within.</p>
+
+        <p>That conversation changed everything. It became the foundation of how I run JNB and how I help my clients today. Because the problem isn't that we care too much — it's that we forget to make our work teachable.</p>
+
+        <h2>What Teachable Work Looks Like</h2>
+
+        <p><strong>Teachable work is work that survives you.</strong></p>
+
+        <p>It's not about lowering standards or letting go of quality. It's about creating structure — naming what you do, documenting how you do it, and making it possible for others to do it well too.</p>
+
+        <div class="highlight-box">
+            <p>You can't scale a person. But you can scale a process.</p>
+        </div>
+
+        <p>At JNB, that's become our obsession. We don't just fix what's broken; we make it teachable. Every workflow, every dashboard, every system is built so it can be passed on, taught, and improved without depending on one person.</p>
+
+        <h2>The Real Lesson</h2>
+
+        <p>What I learned at Spire wasn't failure — it was foundation. I learned that being irreplaceable is not the goal. Building something that outlives you is.</p>
+
+        <p>I used to think excellence meant doing it all myself. Now I know it means building systems that make excellence possible for everyone.</p>
+
+        <p><strong>That's the heart of JNB.</strong></p>
+
+        <p>Build teachable. Lead sustainably. Grow freely.</p>
+
+        <div class="blog-cta">
+            <h3>Ready to make your business teachable?</h3>
+            <p>Let's build systems that don't depend on you being in the room.</p>
+            <a href="contact.html">Let's Talk</a>
+        </div>
+
+        <p><em>Sara Hass<br>Founder, JNB LLC</em></p>
+    </article>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="JNB_LLC_OFFICIAL_LOGO_2026.png" alt="JNB LLC">
+        </div>
+        <p class="footer-tagline">We make the numbers make sense.</p>
+        
+        <p class="footer-legal">© 2026 JNB LLC. All rights reserved.</p>
+    </footer>
+</body>
+</html>

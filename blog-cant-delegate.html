@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-63CXJJJX7E"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-63CXJJJX7E');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You Can't Delegate What You Can't Define | JNB LLC</title>
+    <meta name="description" content="Learn why hiring isn't the answer to chaos—and how defining your work is the first step to delegating it effectively.">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --teal: #1a8a8a;
+            --teal-dark: #156b6b;
+            --teal-light: #e8f4f4;
+            --black: #1a1a1a;
+            --white: #ffffff;
+            --gray-50: #fafafa;
+            --gray-200: #e5e5e5;
+            --gray-400: #a3a3a3;
+            --gray-600: #525252;
+            --serif: 'Cormorant Garamond', Georgia, serif;
+            --sans: 'Outfit', -apple-system, sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--sans); font-weight: 400; color: var(--black); background: var(--white); line-height: 1.6; font-size: 17px; }
+        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--gray-200); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: var(--black); }
+        .logo img { height: 50px; }
+        .logo-text { font-family: var(--serif); font-size: 1.5rem; font-weight: 500; }
+        .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+        .nav-links a { text-decoration: none; color: var(--gray-600); font-size: 0.95rem; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--teal); }
+        .nav-cta { background: var(--teal); color: var(--white) !important; padding: 0.6rem 1.25rem; border-radius: 6px; }
+        .nav-cta:hover { background: var(--teal-dark) !important; }
+
+        .blog-header {
+            padding: 10rem 2rem 3rem;
+            background: linear-gradient(165deg, var(--white) 0%, var(--teal-light) 100%);
+        }
+        .blog-header-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .blog-meta {
+            font-size: 0.9rem;
+            color: var(--gray-600);
+            margin-bottom: 1rem;
+        }
+        .blog-header h1 {
+            font-family: var(--serif);
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 500;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+        .blog-subtitle {
+            font-size: 1.15rem;
+            color: var(--gray-600);
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        .blog-content {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 3rem 2rem 5rem;
+        }
+        .blog-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: var(--gray-600);
+            font-weight: 300;
+        }
+        .blog-content h2 {
+            font-family: var(--serif);
+            font-size: 1.75rem;
+            font-weight: 500;
+            margin: 3rem 0 1.5rem;
+            color: var(--black);
+        }
+        .blog-content strong {
+            color: var(--black);
+            font-weight: 500;
+        }
+        .blog-content ul {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+        .blog-content li {
+            margin-bottom: 0.5rem;
+            color: var(--gray-600);
+            font-weight: 300;
+            line-height: 1.7;
+        }
+        .blog-content blockquote {
+            border-left: 3px solid var(--teal);
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+            font-family: var(--serif);
+            font-size: 1.25rem;
+            font-style: italic;
+            color: var(--black);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--teal);
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 2rem;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .highlight-box {
+            background: var(--teal-light);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .highlight-box p {
+            margin-bottom: 0;
+            font-family: var(--serif);
+            font-size: 1.35rem;
+            color: var(--black);
+            font-style: italic;
+            line-height: 1.5;
+        }
+
+        .blog-cta {
+            background: var(--gray-50);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+        .blog-cta h3 {
+            font-family: var(--serif);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .blog-cta p {
+            margin-bottom: 1.5rem;
+        }
+        .blog-cta a {
+            display: inline-block;
+            background: var(--teal);
+            color: var(--white);
+            padding: 0.9rem 1.75rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        .blog-cta a:hover {
+            background: var(--teal-dark);
+        }
+
+        footer { background: var(--gray-50); padding: 3rem 2rem; text-align: center; border-top: 1px solid var(--gray-200); }
+        .footer-logo { display: flex; align-items: center; justify-content: center; gap: 0.75rem; margin-bottom: 1rem; }
+        .footer-logo img { height: 70px; }
+        .footer-tagline { color: var(--gray-600); font-weight: 300; margin-bottom: 1.5rem; }
+        .footer-legal { color: var(--gray-400); font-size: 0.85rem; }
+
+        @media (max-width: 600px) { .nav-links { display: none; } .blog-header { padding: 7rem 1.5rem 2rem; } }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="JNB_LLC_OFFICIAL_LOGO_2026.png" alt="JNB LLC">
+            <span class="logo-text">JNB</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="training.html">Training</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html" class="nav-cta">Let's Talk</a></li>
+        </ul>
+    </nav>
+
+    <header class="blog-header">
+        <div class="blog-header-content">
+            <div class="blog-meta">Sara Hass</div>
+            <h1>You Can't Delegate What You Can't Define</h1>
+            <p class="blog-subtitle">The myth of hiring your way out of chaos.</p>
+        </div>
+    </header>
+
+    <article class="blog-content">
+        <a href="blog.html" class="back-link">← Back to all posts</a>
+
+        <p><strong>Most business owners think they need more hands. Usually, they just need a better map.</strong></p>
+
+        <p>It's easy to believe that hiring someone will solve the overwhelm—that another person will finally take things off your plate. But without clarity, delegation just multiplies confusion. You can't hand off what you haven't clearly defined.</p>
+
+        <p>At JNB, we see this all the time. Teams struggling not because they lack people, but because no one really knows what success looks like in their role. Processes live in heads, not systems. Everyone's busy, but not everyone's effective.</p>
+
+        <div class="highlight-box">
+            <p>You don't need more people. You need more clarity.</p>
+        </div>
+
+        <h2>Definition Before Delegation</h2>
+
+        <p>Before you can delegate something, you have to define it. That means knowing:</p>
+
+        <ul>
+            <li>What outcome you expect</li>
+            <li>What steps it takes to get there</li>
+            <li>What tools, time, or data are required</li>
+            <li>How you'll measure success</li>
+        </ul>
+
+        <p>Without those definitions, every new hire is guessing—and you end up managing results instead of leading progress.</p>
+
+        <p>We've watched this happen in every kind of company—from contractors to consultants, from security firms to salons. The moment you define the work, accountability becomes automatic.</p>
+
+        <h2>The Real Cost of Undefined Work</h2>
+
+        <p>Undefined work looks like chaos:</p>
+
+        <ul>
+            <li>Rework and miscommunication</li>
+            <li>Constant follow-ups and missed deadlines</li>
+            <li>Burnout for the owner and frustration for the team</li>
+        </ul>
+
+        <p>Every gap in definition becomes a hidden cost—wasted hours, duplicated effort, and decisions made without direction.</p>
+
+        <p><strong>When everything depends on your brain to fill in the blanks, your business becomes fragile. Clarity makes it strong.</strong></p>
+
+        <h2>The JNB Approach</h2>
+
+        <p>At JNB, we build clarity into everything we touch. Before we automate or assign, we document and define. We map the work, identify the friction points, and translate them into teachable processes that anyone can follow.</p>
+
+        <p>Our goal isn't just to delegate tasks—it's to create alignment. Because when your team understands the "why" behind the "what," they don't need constant supervision. They take ownership.</p>
+
+        <p>That's how scalability starts.</p>
+
+        <h2>Build the Foundation Before You Build the Team</h2>
+
+        <p>Delegation isn't a magic fix—it's a mirror. It reflects how clearly you understand your own business.</p>
+
+        <p>If you can't describe it, you can't delegate it. And if you can't delegate it, you can't scale it.</p>
+
+        <p>The solution isn't more hands on deck—it's better directions for the ones you already have.</p>
+
+        <p>So before you hire another person, take a step back and ask:</p>
+
+        <blockquote>Can I define what success looks like here?</blockquote>
+
+        <p>If not, that's where the work begins.</p>
+
+        <div class="highlight-box">
+            <p>You can't delegate what you can't define. But once you define it—you can build anything.</p>
+        </div>
+
+        <div class="blog-cta">
+            <h3>Need help defining your work?</h3>
+            <p>We build clarity into chaos. Let's talk about your operations.</p>
+            <a href="contact.html">Get in Touch</a>
+        </div>
+
+        <p><em>Sara Hass<br>Founder, JNB LLC</em></p>
+    </article>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="JNB_LLC_OFFICIAL_LOGO_2026.png" alt="JNB LLC">
+        </div>
+        <p class="footer-tagline">We make the numbers make sense.</p>
+        
+        <p class="footer-legal">© 2026 JNB LLC. All rights reserved.</p>
+    </footer>
+</body>
+</html>

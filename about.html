@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-63CXJJJX7E"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-63CXJJJX7E');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | JNB LLC</title>
+    <meta name="description" content="JNB LLC is a boutique business consulting firm helping small businesses understand their numbers and run better operations. Based in Littleton, Colorado.">
+    <meta property="og:image" content="https://jnbservice.com/JNB_LLC_OFFICIAL_LOGO_2026.png">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --teal: #1a8a8a;
+            --teal-dark: #156b6b;
+            --teal-light: #e8f4f4;
+            --black: #1a1a1a;
+            --white: #ffffff;
+            --gray-50: #fafafa;
+            --gray-100: #f5f5f5;
+            --gray-200: #e5e5e5;
+            --gray-400: #a3a3a3;
+            --gray-600: #525252;
+            --serif: 'Cormorant Garamond', Georgia, serif;
+            --sans: 'Outfit', -apple-system, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--sans);
+            font-weight: 400;
+            color: var(--black);
+            background: var(--white);
+            line-height: 1.6;
+            font-size: 17px;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--gray-200);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--black);
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        .logo-text {
+            font-family: var(--serif);
+            font-size: 1.5rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--gray-600);
+            font-size: 0.95rem;
+            font-weight: 400;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--teal);
+        }
+
+        .nav-cta {
+            background: var(--teal);
+            color: var(--white) !important;
+            padding: 0.6rem 1.25rem;
+            border-radius: 6px;
+            transition: background 0.2s ease !important;
+        }
+
+        .nav-cta:hover {
+            background: var(--teal-dark) !important;
+        }
+
+        /* Page Header */
+        .page-header {
+            padding: 10rem 2rem 4rem;
+            background: linear-gradient(165deg, var(--white) 0%, var(--teal-light) 100%);
+        }
+
+        .page-header-content {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .page-header-image {
+            position: relative;
+        }
+
+        .page-header-placeholder {
+            width: 100%;
+            aspect-ratio: 4/5;
+            background: var(--white);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray-400);
+            font-size: 0.9rem;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        }
+
+        .page-header-text h1 {
+            font-family: var(--serif);
+            font-size: clamp(2.25rem, 4vw, 3rem);
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            color: var(--black);
+            line-height: 1.2;
+        }
+
+        .page-header-text p {
+            color: var(--gray-600);
+            font-weight: 300;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.25rem;
+        }
+
+        .page-header-text .highlight {
+            color: var(--black);
+            font-weight: 400;
+        }
+
+        /* Story Section */
+        .story {
+            padding: 5rem 2rem;
+            background: var(--white);
+        }
+
+        .story-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .story h2 {
+            font-family: var(--serif);
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            color: var(--black);
+        }
+
+        .story p {
+            color: var(--gray-600);
+            font-weight: 300;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .story p:last-child {
+            margin-bottom: 0;
+        }
+
+        .story .highlight {
+            color: var(--black);
+            font-weight: 400;
+        }
+
+        /* Truth Callout */
+        .truth-callout {
+            background: var(--teal);
+            padding: 4rem 2rem;
+        }
+
+        .truth-callout-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .truth-callout p {
+            font-family: var(--serif);
+            font-size: clamp(1.35rem, 2.5vw, 1.6rem);
+            font-weight: 400;
+            color: var(--white);
+            line-height: 1.7;
+            font-style: italic;
+        }
+
+        /* How We Work */
+        .how-we-work {
+            padding: 5rem 2rem;
+            background: var(--gray-50);
+        }
+
+        .how-we-work-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .how-we-work h2 {
+            font-family: var(--serif);
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: 2.5rem;
+            color: var(--black);
+            text-align: center;
+        }
+
+        .how-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .how-item {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .how-number {
+            font-family: var(--serif);
+            font-size: 3rem;
+            font-weight: 500;
+            color: var(--teal);
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        .how-item h3 {
+            font-family: var(--serif);
+            font-size: 1.35rem;
+            font-weight: 500;
+            margin-bottom: 0.75rem;
+            color: var(--black);
+        }
+
+        .how-item p {
+            color: var(--gray-600);
+            font-weight: 300;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Crazy Ones Section */
+        .crazy-ones {
+            padding: 4rem 2rem;
+            background: var(--black);
+        }
+        .crazy-ones-content {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .crazy-ones-content img {
+            max-width: 100%;
+            height: auto;
+            filter: invert(1);
+        }
+
+        /* CTA Section */
+        .about-cta {
+            padding: 5rem 2rem;
+            text-align: center;
+            background: var(--white);
+        }
+
+        .about-cta h2 {
+            font-family: var(--serif);
+            font-size: 2.25rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            color: var(--black);
+        }
+
+        .about-cta p {
+            color: var(--gray-600);
+            font-weight: 300;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .about-cta a {
+            display: inline-block;
+            background: var(--teal);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .about-cta a:hover {
+            background: var(--teal-dark);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--gray-50);
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 1px solid var(--gray-200);
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-logo img {
+            height: 70px;
+        }
+
+        .footer-tagline {
+            color: var(--gray-600);
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-legal {
+            color: var(--gray-400);
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .page-header-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .page-header-image {
+                max-width: 280px;
+                margin: 0 auto;
+            }
+
+            .how-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .nav-links {
+                display: none;
+            }
+
+            .page-header {
+                padding: 7rem 1.5rem 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="JNB_LLC_OFFICIAL_LOGO_2026.png" alt="JNB LLC">
+            <span class="logo-text">JNB</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="training.html">Training</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html" class="nav-cta">Let's Talk</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-header">
+        <div class="page-header-content">
+            <div class="page-header-image">
+                <img src="Hass.jpg" alt="Sara - JNB LLC" style="width: 100%; border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.1);">
+            </div>
+            <div class="page-header-text">
+                <h1>Hi, I'm Sara.</h1>
+                <p>JNB started because I kept meeting business owners who were intimidated by their own numbers - and they had no reason to be. They just needed someone to explain things in a way that made sense.</p>
+                <p><span class="highlight">Some clients need a full financial transformation. Some just need someone to clean up QuickBooks so they can file taxes.</span> I do both.</p>
+                <p>What I don't do is make you feel bad for not knowing this stuff already. Numbers didn't come naturally to me either - I figured it out because I had to, and now I help other people do the same.</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="truth-callout">
+        <div class="truth-callout-content">
+            <p>You're great at your trade. That's why you started your business. But being the best electrician, consultant, or security tech doesn't automatically make you great at running a company - and nobody teaches you that part. Most clients come to me with a "books problem" and discover it goes a lot deeper.</p>
+        </div>
+    </section>
+
+    <section class="story">
+        <div class="story-content">
+            <h2>The real story</h2>
+            <p>I barely passed accounting in high school. Needed an abacus to graduate - that's not a joke. Numbers were not my thing.</p>
+            <p>But somewhere along the way, I realized the problem wasn't that I couldn't do math. The problem was that nobody had ever explained financial concepts in a way that made sense to me. Once I figured it out for myself, I started helping other people figure it out too.</p>
+            <p><span class="highlight">That's still what I do.</span> I translate. I take the spreadsheets and reports and accounting jargon and turn it into plain English that business owners can actually use to make decisions.</p>
+            <p>Most accountants stop at the report. Most entrepreneurs stop at instinct. <span class="highlight">JNB was built to fill the gap between those two worlds</span> - connecting the story in your numbers to the strategy in your mind. We speak human first, numbers second.</p>
+            <p>These days I work with a small team - just a handful of us, but we cover a lot of ground. Bookkeeping, fractional CFO work, operations consulting, even web and app development when that's what a client needs. We're based in Littleton, Colorado, but we work with clients all over.</p>
+            <p>The common thread is always the same: <span class="highlight">we help you understand your business better than you did before.</span></p>
+        </div>
+    </section>
+
+    <section class="how-we-work">
+        <div class="how-we-work-content">
+            <h2>How we work</h2>
+            <div class="how-grid">
+                <div class="how-item">
+                    <div class="how-number">1</div>
+                    <h3>We start with the real problem</h3>
+                    <p>Not what you think is wrong, but what's actually happening. Sometimes it's what you expected. Usually there's more to it.</p>
+                </div>
+                <div class="how-item">
+                    <div class="how-number">2</div>
+                    <h3>We make it make sense</h3>
+                    <p>No jargon, no reports you won't read. Just clear information you can actually use to make decisions.</p>
+                </div>
+                <div class="how-item">
+                    <div class="how-number">3</div>
+                    <h3>We stick around</h3>
+                    <p>Whether it's a one-time cleanup or ongoing support, we're here until you don't need us anymore.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="truth-callout">
+        <div class="truth-callout-content">
+            <p class="callout-lead">Professional. Friendly. Bold. Minimalist. Tech-Savvy. Human.</p>
+            <p>That's not a tagline—it's who we are. We don't believe professionalism means perfection. It means showing up with clarity, consistency, and care. It means talking like real people, solving real problems, and never hiding behind jargon.</p>
+            <p>In a world full of automated everything, people still crave connection. That's why we build systems that are teachable, not complicated. Reports that make sense, not noise. And we talk to clients like partners, not projects.</p>
+            <p style="font-style: italic; margin-top: 1.5rem;">Because behind every transaction is a person—and behind every business is a story.</p>
+        </div>
+    </section>
+
+    <section class="crazy-ones">
+        <div class="crazy-ones-content">
+            <img src="Crazy_copy.png" alt="Here's to the crazy ones - The Misfits, The Rebels, The Troublemakers">
+        </div>
+    </section>
+
+    <section class="about-cta">
+        <h2>Want to see if we're a fit?</h2>
+        <p>No pressure, no pitch. Just a conversation about where you are and where you want to go.</p>
+        <a href="contact.html">Get in Touch</a>
+    </section>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="JNB_LLC_OFFICIAL_LOGO_2026.png" alt="JNB LLC">
+        </div>
+        <p class="footer-tagline">We make the numbers make sense.</p>
+        
+        <p class="footer-legal">© 2026 JNB LLC. All rights reserved.</p>
+    </footer>
+</body>
+</html>

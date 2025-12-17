@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-63CXJJJX7E"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-63CXJJJX7E');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Being Busy. Start Being Profitable. | JNB LLC</title>
+    <meta name="description" content="I help service business owners see where profit is leaking—and fix it. Bookkeeping + profitability systems for salons, consultants, freelancers, and small service teams.">
+    <meta name="keywords" content="bookkeeping for service businesses, profitability consulting, QuickBooks setup, small business accounting, floor rate calculator, utilization tracking">
+    <meta property="og:image" content="https://jnbservice.com/JNB_LLC_OFFICIAL_LOGO_2026.png">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --teal: #1a8a8a;
+            --teal-dark: #156b6b;
+            --teal-light: #e8f4f4;
+            --black: #1a1a1a;
+            --white: #ffffff;
+            --gray-50: #fafafa;
+            --gray-200: #e5e5e5;
+            --gray-400: #a3a3a3;
+            --gray-600: #525252;
+            --serif: 'Cormorant Garamond', Georgia, serif;
+            --sans: 'Outfit', -apple-system, sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--sans); font-weight: 400; color: var(--black); background: var(--white); line-height: 1.6; font-size: 17px; }
+        
+        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--gray-200); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: var(--black); }
+        .logo img { height: 50px; }
+        .logo-text { font-family: var(--serif); font-size: 1.5rem; font-weight: 500; }
+        .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+        .nav-links a { text-decoration: none; color: var(--gray-600); font-size: 0.95rem; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--teal); }
+        .nav-cta { background: var(--teal); color: var(--white) !important; padding: 0.6rem 1.25rem; border-radius: 6px; }
+        .nav-cta:hover { background: var(--teal-dark) !important; }
+
+        /* Hero */
+        .lp-hero {
+            padding: 10rem 2rem 5rem;
+            background: var(--black);
+            color: var(--white);
+            text-align: center;
+        }
+        .lp-hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .lp-hero h1 {
+            font-family: var(--serif);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+        .lp-hero h1 span {
+            color: var(--teal);
+        }
+        .lp-hero .subtitle {
+            font-size: 1.35rem;
+            color: var(--gray-400);
+            font-weight: 300;
+            margin-bottom: 0.5rem;
+        }
+        .lp-hero .byline {
+            font-size: 1rem;
+            color: var(--gray-600);
+        }
+
+        /* Problem Section */
+        .problem {
+            padding: 5rem 2rem;
+            background: var(--white);
+        }
+        .problem-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .problem h2 {
+            font-family: var(--serif);
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .problem-list {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+        .problem-list li {
+            padding: 1rem 0;
+            padding-left: 2.5rem;
+            position: relative;
+            color: var(--gray-600);
+            font-weight: 300;
+            font-size: 1.1rem;
+            border-bottom: 1px solid var(--gray-200);
+        }
+        .problem-list li:last-child {
+            border-bottom: none;
+        }
+        .problem-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--teal);
+            font-weight: 600;
+        }
+        .problem-answer {
+            text-align: center;
+            font-family: var(--serif);
+            font-size: 1.5rem;
+            color: var(--black);
+            margin-top: 2rem;
+        }
+
+        /* Services */
+        .services-lp {
+            padding: 5rem 2rem;
+            background: var(--gray-50);
+        }
+        .services-lp-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .services-lp h2 {
+            font-family: var(--serif);
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .services-lp > p {
+            text-align: center;
+            color: var(--gray-600);
+            font-weight: 300;
+            margin-bottom: 3rem;
+        }
+        .service-lp-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border: 1px solid var(--gray-200);
+        }
+        .service-lp-card h3 {
+            font-family: var(--serif);
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        .service-lp-card p {
+            color: var(--gray-600);
+            font-weight: 300;
+            margin-bottom: 1rem;
+        }
+        .service-lp-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        .service-lp-card li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--gray-600);
+            font-weight: 300;
+        }
+        .service-lp-card li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--teal);
+        }
+
+        /* Who It's For */
+        .who {
+            padding: 5rem 2rem;
+            background: var(--white);
+        }
+        .who-content {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .who h2 {
+            font-family: var(--serif);
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+        }
+        .who-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+        .who-item {
+            background: var(--teal-light);
+            padding: 1.25rem 1.5rem;
+            border-radius: 8px;
+            color: var(--black);
+            font-weight: 400;
+        }
+        .who-bottom {
+            font-family: var(--serif);
+            font-size: 1.25rem;
+            font-style: italic;
+            color: var(--gray-600);
+        }
+
+        /* Pricing */
+        .pricing {
+            padding: 5rem 2rem;
+            background: var(--gray-50);
+        }
+        .pricing-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .pricing h2 {
+            font-family: var(--serif);
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+        .pricing-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 2rem;
+            border: 1px solid var(--gray-200);
+            text-align: center;
+        }
+        .pricing-card.featured {
+            border-color: var(--teal);
+            box-shadow: 0 10px 40px rgba(26, 138, 138, 0.15);
+            position: relative;
+        }
+        .pricing-card.featured::before {
+            content: 'Recommended';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--teal);
+            color: var(--white);
+            padding: 0.25rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        .pricing-card h3 {
+            font-family: var(--serif);
+            font-size: 1.35rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        .pricing-card .price {
+            font-family: var(--serif);
+            font-size: 2.5rem;
+            font-weight: 500;
+            color: var(--teal);
+            margin-bottom: 0.5rem;
+        }
+        .pricing-card .price-note {
+            font-size: 0.85rem;
+            color: var(--gray-400);
+            margin-bottom: 1.5rem;
+        }
+        .pricing-card p {
+            color: var(--gray-600);
+            font-weight: 300;
+            font-size: 0.95rem;
+        }
+
+        /* Why Me */
+        .why-me {
+            padding: 5rem 2rem;
+            background: var(--white);
+        }
+        .why-me-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .why-me h2 {
+            font-family: var(--serif);
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+        }
+        .why-me p {
+            color: var(--gray-600);
+            font-weight: 300;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        .why-me a {
+            color: var(--teal);
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 5rem 2rem;
+            background: var(--teal);
+        }
+        .testimonials-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .testimonials h2 {
+            font-family: var(--serif);
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: var(--white);
+        }
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .testimonial {
+            background: rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 2rem;
+        }
+        .testimonial p {
+            color: var(--white);
+            font-style: italic;
+            font-weight: 300;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        .testimonial .attribution {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+        }
+
+        /* Final CTA */
+        .final-cta {
+            padding: 5rem 2rem;
+            background: var(--black);
+            text-align: center;
+        }
+        .final-cta-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .final-cta h2 {
+            font-family: var(--serif);
+            font-size: 2.25rem;
+            font-weight: 500;
+            color: var(--white);
+            margin-bottom: 2rem;
+        }
+        .cta-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        .cta-btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        .cta-btn.primary {
+            background: var(--teal);
+            color: var(--white);
+        }
+        .cta-btn.primary:hover {
+            background: var(--teal-dark);
+        }
+        .cta-btn.secondary {
+            background: transparent;
+            color: var(--white);
+            border: 1px solid var(--gray-600);
+        }
+        .cta-btn.secondary:hover {
+            border-color: var(--white);
+        }
+        .final-cta .tagline {
+            font-family: var(--serif);
+            font-size: 1.5rem;
+            color: var(--teal);
+            font-style: italic;
+            margin-top: 2rem;
+        }
+
+        /* Contact Info */
+        .contact-info {
+            text-align: center;
+            padding: 2rem;
+            background: var(--gray-50);
+            border-top: 1px solid var(--gray-200);
+        }
+        .contact-info p {
+            color: var(--gray-600);
+            font-weight: 300;
+        }
+        .contact-info a {
+            color: var(--teal);
+            text-decoration: none;
+        }
+
+        footer { background: var(--gray-50); padding: 2rem; text-align: center; }
+        .footer-legal { color: var(--gray-400); font-size: 0.85rem; }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .lp-hero { padding: 7rem 1.5rem 3rem; }
+            .who-list { grid-template-columns: 1fr; }
+            .cta-buttons { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="JNB_LLC_OFFICIAL_LOGO_2026.png" alt="JNB LLC">
+            <span class="logo-text">JNB</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="training.html">Training</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html" class="nav-cta">Let's Talk</a></li>
+        </ul>
+    </nav>
+
+    <header class="lp-hero">
+        <div class="lp-hero-content">
+            <h1>Stop Being Busy.<br><span>Start Being Profitable.</span></h1>
+            <p class="subtitle">I help service business owners see where profit is leaking—and fix it.</p>
+            <p class="byline">Sara Hass | JNB LLC | Bookkeeping + Profitability Systems</p>
+        </div>
+    </header>
+
+    <section class="problem">
+        <div class="problem-content">
+            <h2>You're working 50+ hours a week. Where's the profit?</h2>
+            <ul class="problem-list">
+                <li>Constantly busy but cash flow is tight</li>
+                <li>Not sure which clients actually make you money</li>
+                <li>Pricing based on gut feel, not actual costs</li>
+                <li>The only person who knows how your business works</li>
+            </ul>
+            <p class="problem-answer">You need systems, not more hours.</p>
+        </div>
+    </section>
+
+    <section class="services-lp">
+        <div class="services-lp-content">
+            <h2>Here's What I Do</h2>
+            <p>Bookkeeping that actually helps you make decisions. Not just reports. Insights.</p>
+
+            <div class="service-lp-card">
+                <h3>Bookkeeping That Actually Helps You Make Decisions</h3>
+                <ul>
+                    <li>Clean QuickBooks setup and monthly reconciliation</li>
+                    <li>Which clients are profitable (and which aren't)</li>
+                    <li>What your time actually costs (floor rate + utilization)</li>
+                    <li>Where expenses can be cut without cutting quality</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="who">
+        <div class="who-content">
+            <h2>For Service Businesses That Need to Know Their Numbers</h2>
+            <div class="who-list">
+                <div class="who-item">Salons and stylists</div>
+                <div class="who-item">Solo accountants and consultants</div>
+                <div class="who-item">Freelancers and agencies</div>
+                <div class="who-item">Small service teams (5-50 people)</div>
+            </div>
+            <p class="who-bottom">If you're selling time, I'll show you how to price it right.</p>
+        </div>
+    </section>
+
+    <section class="pricing">
+        <div class="pricing-content">
+            <h2>Three Ways to Work Together</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Discovery</h3>
+                    <div class="price">$195</div>
+                    <div class="price-note">One-time</div>
+                    <p>Quick review of your current situation. I'll show you what's broken and what it's costing you.</p>
+                </div>
+                <div class="pricing-card">
+                    <h3>Implementation</h3>
+                    <div class="price">$1,000</div>
+                    <div class="price-note">One-time</div>
+                    <p>QuickBooks cleanup, system setup, get you organized properly. Takes 3-4 weeks.</p>
+                </div>
+                <div class="pricing-card featured">
+                    <h3>Profitability Tracking</h3>
+                    <div class="price">$400</div>
+                    <div class="price-note">Per month</div>
+                    <p>Ongoing bookkeeping plus utilization tracking and profitability analysis. Know your numbers, every month.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-me">
+        <div class="why-me-content">
+            <h2>Why Me?</h2>
+            <p><strong>Because I've been where you are.</strong></p>
+            <p>I built my business by being the one who could "do it all."</p>
+            <p>Then I realized: if I got hit by a bus tomorrow, my business would collapse. Not because it wasn't valuable—because it wasn't teachable.</p>
+            <p>So I rebuilt it. With systems, documentation, and the kind of tracking that actually matters.</p>
+            <p>Now I help other service business owners do the same.</p>
+            <p>Read the full story: <a href="blog-i-built-the-house.html">I Built the House. I Forgot the Foundation.</a></p>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="testimonials-content">
+            <h2>What Clients Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <p>"Sara showed me I was losing $8K/month to unbilled time. Six months later, I'm making $3K more per month working fewer hours."</p>
+                    <div class="attribution">— Salon owner, Denver</div>
+                </div>
+                <div class="testimonial">
+                    <p>"She doesn't just do my books. She shows me which clients I should fire. Best business decision I've made."</p>
+                    <div class="attribution">— Solo accountant, Boulder</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <div class="final-cta-content">
+            <h2>Start Here</h2>
+            <div class="cta-buttons">
+                <a href="contact.html" class="cta-btn primary">Book a Free 15-Minute Call</a>
+                <a href="training.html" class="cta-btn secondary">Get the Free Guide</a>
+            </div>
+            <p class="tagline">Busy ≠ Billable. Let me show you the difference.</p>
+        </div>
+    </section>
+
+    <div class="contact-info">
+        <p>Sara Hass | JNB LLC | <a href="mailto:admin@jnbservice.com">admin@jnbservice.com</a><br>
+        Colorado-based, serving clients nationwide</p>
+    </div>
+
+    <footer>
+        <p class="footer-legal">© 2026 JNB LLC. All rights reserved.</p>
+    </footer>
+</body>
+</html>

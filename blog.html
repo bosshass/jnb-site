@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-63CXJJJX7E"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-63CXJJJX7E');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | JNB LLC</title>
+    <meta name="description" content="Thoughts on running a business, making sense of your numbers, and lessons learned the hard way. From Sara Hass at JNB LLC.">
+    <meta property="og:image" content="https://jnbservice.com/JNB_LLC_OFFICIAL_LOGO_2026.png">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --teal: #1a8a8a;
+            --teal-dark: #156b6b;
+            --teal-light: #e8f4f4;
+            --black: #1a1a1a;
+            --white: #ffffff;
+            --gray-50: #fafafa;
+            --gray-200: #e5e5e5;
+            --gray-400: #a3a3a3;
+            --gray-600: #525252;
+            --serif: 'Cormorant Garamond', Georgia, serif;
+            --sans: 'Outfit', -apple-system, sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--sans); font-weight: 400; color: var(--black); background: var(--white); line-height: 1.6; font-size: 17px; }
+        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--gray-200); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: var(--black); }
+        .logo img { height: 50px; }
+        .logo-text { font-family: var(--serif); font-size: 1.5rem; font-weight: 500; }
+        .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+        .nav-links a { text-decoration: none; color: var(--gray-600); font-size: 0.95rem; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--teal); }
+        .nav-cta { background: var(--teal); color: var(--white) !important; padding: 0.6rem 1.25rem; border-radius: 6px; }
+        .nav-cta:hover { background: var(--teal-dark) !important; }
+
+        .page-header {
+            padding: 10rem 2rem 4rem;
+            background: linear-gradient(165deg, var(--white) 0%, var(--teal-light) 100%);
+            text-align: center;
+        }
+        .page-header h1 {
+            font-family: var(--serif);
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        .page-header p {
+            font-size: 1.2rem;
+            color: var(--gray-600);
+            font-weight: 300;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .blog-list {
+            padding: 4rem 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .blog-card {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-radius: 16px;
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            transition: all 0.3s ease;
+        }
+
+        .blog-card:hover {
+            border-color: var(--teal);
+            box-shadow: 0 10px 40px rgba(26, 138, 138, 0.1);
+            transform: translateY(-4px);
+        }
+
+        .blog-date {
+            font-size: 0.85rem;
+            color: var(--gray-400);
+            margin-bottom: 0.75rem;
+        }
+
+        .blog-card h2 {
+            font-family: var(--serif);
+            font-size: 1.75rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            color: var(--black);
+        }
+
+        .blog-card p {
+            color: var(--gray-600);
+            font-weight: 300;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .read-more {
+            color: var(--teal);
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .blog-card:hover .read-more {
+            text-decoration: underline;
+        }
+
+        footer { background: var(--gray-50); padding: 3rem 2rem; text-align: center; border-top: 1px solid var(--gray-200); }
+        .footer-logo { display: flex; align-items: center; justify-content: center; gap: 0.75rem; margin-bottom: 1rem; }
+        .footer-logo img { height: 70px; }
+        .footer-tagline { color: var(--gray-600); font-weight: 300; margin-bottom: 1.5rem; }
+        .footer-legal { color: var(--gray-400); font-size: 0.85rem; }
+
+        @media (max-width: 600px) { .nav-links { display: none; } .page-header { padding: 7rem 1.5rem 3rem; } }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="JNB_LLC_OFFICIAL_LOGO_2026.png" alt="JNB LLC">
+            <span class="logo-text">JNB</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="training.html">Training</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html" class="nav-cta">Let's Talk</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-header">
+        <h1>Blog</h1>
+        <p>Thoughts on running a business, making sense of your numbers, and lessons learned the hard way.</p>
+    </header>
+
+    <section class="blog-list">
+        <a href="blog-i-built-the-house.html" class="blog-card">
+            <div class="blog-date">October 8, 2025</div>
+            <h2>I Built the House. I Forgot the Foundation.</h2>
+            <p>How "I can do it all" almost destroyed my business—and what I'm doing to fix it. If you're the only one who can do it, you're not an asset—you're a liability.</p>
+            <span class="read-more">Read more →</span>
+        </a>
+
+        <a href="blog-spire-lesson.html" class="blog-card">
+            <div class="blog-date">Lessons Learned</div>
+            <h2>The Spire Lesson: Why Teachable Work Wins</h2>
+            <p>What I learned when I became the bottleneck. How being almost fired for not being scalable taught me the value of building systems that grow beyond you.</p>
+            <span class="read-more">Read more →</span>
+        </a>
+
+        <a href="blog-cant-delegate.html" class="blog-card">
+            <div class="blog-date">Operations</div>
+            <h2>You Can't Delegate What You Can't Define</h2>
+            <p>The myth of hiring your way out of chaos. Most business owners think they need more hands. Usually, they just need a better map.</p>
+            <span class="read-more">Read more →</span>
+        </a>
+
+        <a href="blog-queen-of-doing-that.html" class="blog-card">
+            <div class="blog-date">Systems</div>
+            <h2>The Queen of Doing That</h2>
+            <p>Systems are my love language. Because the right system doesn't take away your freedom—it gives it back.</p>
+            <span class="read-more">Read more →</span>
+        </a>
+
+        <a href="blog-1-year-anniversary.html" class="blog-card">
+            <div class="blog-date">August 30, 2025</div>
+            <h2>1 Year Anniversary</h2>
+            <p>We started with a simple goal: help businesses with their bookkeeping. But "I need help with my books" often means so much more. Here's what we learned in year one.</p>
+            <span class="read-more">Read more →</span>
+        </a>
+
+        <a href="blog-legend-of-1000-cranes.html" class="blog-card">
+            <div class="blog-date">2025</div>
+            <h2>Legend of 1,000 Cranes: A Journey of Perseverance and Possibility</h2>
+            <p>How folding 1,000 paper cranes at a tech startup became one of the most transformative experiences of my life—and taught me the patience I'd need to build my own company.</p>
+            <span class="read-more">Read more →</span>
+        </a>
+    </section>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="JNB_LLC_OFFICIAL_LOGO_2026.png" alt="JNB LLC">
+        </div>
+        <p class="footer-tagline">We make the numbers make sense.</p>
+        
+        <p class="footer-legal">© 2026 JNB LLC. All rights reserved.</p>
+    </footer>
+</body>
+</html>

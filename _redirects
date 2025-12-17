@@ -1,0 +1,11 @@
+# Force non-www (canonical)
+https://www.jnbservice.com/* https://jnbservice.com/:splat 301!
+
+# Fix old about-us link if anyone bookmarked it
+/about-us /about 301
+
+# Ensure trailing slashes don't break anything
+/about/ /about 301
+/contact/ /contact 301
+/blog/ /blog 301
+/training/ /training 301

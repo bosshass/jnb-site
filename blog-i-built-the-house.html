@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-63CXJJJX7E"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-63CXJJJX7E');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Built the House. I Forgot the Foundation. | JNB LLC</title>
+    <meta name="description" content="How 'I can do it all' almost destroyed my business—and what I'm doing to fix it. By Sara Hass, JNB LLC.">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --teal: #1a8a8a;
+            --teal-dark: #156b6b;
+            --teal-light: #e8f4f4;
+            --black: #1a1a1a;
+            --white: #ffffff;
+            --gray-50: #fafafa;
+            --gray-200: #e5e5e5;
+            --gray-400: #a3a3a3;
+            --gray-600: #525252;
+            --serif: 'Cormorant Garamond', Georgia, serif;
+            --sans: 'Outfit', -apple-system, sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--sans); font-weight: 400; color: var(--black); background: var(--white); line-height: 1.6; font-size: 17px; }
+        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--gray-200); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: var(--black); }
+        .logo img { height: 50px; }
+        .logo-text { font-family: var(--serif); font-size: 1.5rem; font-weight: 500; }
+        .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+        .nav-links a { text-decoration: none; color: var(--gray-600); font-size: 0.95rem; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--teal); }
+        .nav-cta { background: var(--teal); color: var(--white) !important; padding: 0.6rem 1.25rem; border-radius: 6px; }
+        .nav-cta:hover { background: var(--teal-dark) !important; }
+
+        .blog-header {
+            padding: 10rem 2rem 3rem;
+            background: linear-gradient(165deg, var(--white) 0%, var(--teal-light) 100%);
+        }
+        .blog-header-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .blog-meta {
+            font-size: 0.9rem;
+            color: var(--gray-600);
+            margin-bottom: 1rem;
+        }
+        .blog-header h1 {
+            font-family: var(--serif);
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 500;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+        .blog-subtitle {
+            font-size: 1.25rem;
+            color: var(--gray-600);
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        .blog-content {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 3rem 2rem 5rem;
+        }
+        .blog-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: var(--gray-600);
+            font-weight: 300;
+        }
+        .blog-content h2 {
+            font-family: var(--serif);
+            font-size: 1.75rem;
+            font-weight: 500;
+            margin: 3rem 0 1.5rem;
+            color: var(--black);
+        }
+        .blog-content h3 {
+            font-family: var(--serif);
+            font-size: 1.35rem;
+            font-weight: 500;
+            margin: 2.5rem 0 1rem;
+            color: var(--black);
+        }
+        .blog-content strong {
+            color: var(--black);
+            font-weight: 500;
+        }
+        .blog-content ul, .blog-content ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+        .blog-content li {
+            margin-bottom: 0.5rem;
+            color: var(--gray-600);
+            font-weight: 300;
+            line-height: 1.7;
+        }
+        .blog-content blockquote {
+            border-left: 3px solid var(--teal);
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+            color: var(--gray-600);
+        }
+        .highlight-box {
+            background: var(--teal-light);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        .highlight-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .blog-cta {
+            background: var(--gray-50);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+        .blog-cta h3 {
+            font-family: var(--serif);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .blog-cta p {
+            margin-bottom: 1.5rem;
+        }
+        .blog-cta a {
+            display: inline-block;
+            background: var(--teal);
+            color: var(--white);
+            padding: 0.9rem 1.75rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        .blog-cta a:hover {
+            background: var(--teal-dark);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--teal);
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 2rem;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        footer { background: var(--gray-50); padding: 3rem 2rem; text-align: center; border-top: 1px solid var(--gray-200); }
+        .footer-logo { display: flex; align-items: center; justify-content: center; gap: 0.75rem; margin-bottom: 1rem; }
+        .footer-logo img { height: 70px; }
+        .footer-tagline { color: var(--gray-600); font-weight: 300; margin-bottom: 1.5rem; }
+        .footer-legal { color: var(--gray-400); font-size: 0.85rem; }
+
+        @media (max-width: 600px) { .nav-links { display: none; } .blog-header { padding: 7rem 1.5rem 2rem; } }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="JNB_LLC_OFFICIAL_LOGO_2026.png" alt="JNB LLC">
+            <span class="logo-text">JNB</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="training.html">Training</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html" class="nav-cta">Let's Talk</a></li>
+        </ul>
+    </nav>
+
+    <header class="blog-header">
+        <div class="blog-header-content">
+            <div class="blog-meta">October 8, 2025 · Sara Hass</div>
+            <h1>I Built the House. I Forgot the Foundation.</h1>
+            <p class="blog-subtitle">How "I can do it all" almost destroyed my business—and what I'm doing to fix it</p>
+        </div>
+    </header>
+
+    <article class="blog-content">
+        <a href="blog.html" class="back-link">← Back to all posts</a>
+
+        <p>I'm Sara Hass, founder of JNB LLC.</p>
+
+        <p>My clients love that I'm on top of everything so they don't have to be.</p>
+
+        <p>I've built my reputation on being the one who can do it all.</p>
+
+        <p>Bookkeeping? Got it. Operations? No problem. Marketing, proposals, hiring, QuickBooks, website bugs, client calls? Handled.</p>
+
+        <p><strong>That mindset made JNB successful. It also almost destroyed it.</strong></p>
+
+        <h2>The Machine That Only I Could Run</h2>
+
+        <p>Here's what I didn't realize I was building:</p>
+
+        <p>Not a business.</p>
+
+        <p><strong>A machine that only I knew how to operate.</strong></p>
+
+        <p>No structure. No systems. Just a high-functioning, high-anxiety workaround for everything.</p>
+
+        <p>When a client had an emergency, I handled it. When something broke, I fixed it. When we needed a new process, I built it—in my head, on the fly, never written down.</p>
+
+        <p>I was indispensable.</p>
+
+        <p>And that was the problem.</p>
+
+        <h2>The Truth I Had to Face</h2>
+
+        <p>If I got hit by a bus tomorrow, nothing I've built would survive me.</p>
+
+        <p>Not because it's not valuable.</p>
+
+        <p>Because it's not <strong>teachable.</strong></p>
+
+        <p>Every system I created lived in my head. Every workflow was a series of decisions only I knew how to make. Every client relationship ran through me.</p>
+
+        <p>I had built a business that couldn't exist without me. Which meant I couldn't:</p>
+
+        <ul>
+            <li>Take a vacation without everything falling apart</li>
+            <li>Delegate without micromanaging</li>
+            <li>Scale without working more hours</li>
+            <li>Sell, if I ever wanted to</li>
+            <li>Breathe</li>
+        </ul>
+
+        <h2>This Wasn't the First Time</h2>
+
+        <p>Here's the part that still stings:</p>
+
+        <p><strong>I've done this before.</strong></p>
+
+        <p>Years ago, I got fired from a job I loved.</p>
+
+        <p>They told me I was being "demoted" to train my replacement. I thought it was politics, egos, bullshit.</p>
+
+        <p>But here's what I finally understand now:</p>
+
+        <p>I was fired because I had built something no one else could understand or maintain.</p>
+
+        <p>I was brilliant at execution. Terrible at documentation.</p>
+
+        <p>I created systems that lived entirely in my head. When they asked me to train someone, I couldn't—because I didn't even realize how much of what I did was intuition, workarounds, and institutional knowledge that existed nowhere but in my brain.</p>
+
+        <p>When I couldn't do it anymore, there was nothing left to hand off.</p>
+
+        <p>So they let me go.</p>
+
+        <p>I carried that anger for years. Told myself they didn't appreciate me. That they made a mistake.</p>
+
+        <p>But they didn't.</p>
+
+        <p><strong>I did.</strong></p>
+
+        <h2>What Woke Me Up</h2>
+
+        <p>It was a Tuesday afternoon.</p>
+
+        <p>I was drowning in client work, behind on my own bookkeeping (ironic, I know), and someone asked me a simple question:</p>
+
+        <blockquote>"If you were gone for a month, what would happen to your clients?"</blockquote>
+
+        <p>And I couldn't answer.</p>
+
+        <p>Not because I didn't know.</p>
+
+        <p>Because the answer was too terrifying to say out loud.</p>
+
+        <p><strong>Everything would fall apart.</strong></p>
+
+        <p>Not because my team isn't capable. Not because my clients are high-maintenance.</p>
+
+        <p>But because I never built the infrastructure.</p>
+
+        <p>I built skill. I built reputation. I built relationships.</p>
+
+        <p>I didn't build a <strong>system.</strong></p>
+
+        <h2>The Hard Part</h2>
+
+        <p>You know what's harder than building a business from scratch?</p>
+
+        <p><strong>Rebuilding one that's already successful.</strong></p>
+
+        <p>Because you can't just stop and fix everything. You have to keep the train moving while you're rebuilding the tracks underneath it.</p>
+
+        <p>You have to:</p>
+
+        <ul>
+            <li>Deliver for current clients (who expect the same level of service)</li>
+            <li>Document what you're doing (which takes twice as long)</li>
+            <li>Train others (who won't do it exactly like you, and that's okay)</li>
+            <li>Let go of control (the hardest part)</li>
+        </ul>
+
+        <p>It's messy. It's slow. It's uncomfortable.</p>
+
+        <p>But it's necessary.</p>
+
+        <p>Because the alternative is worse.</p>
+
+        <h2>What I'm Doing Differently This Time</h2>
+
+        <p>I'm rebuilding.</p>
+
+        <p>While still delivering. While still drowning a little. While still showing up for my clients every day.</p>
+
+        <p>But this time, I'm documenting.</p>
+
+        <p>Every process. Every decision. Every workflow.</p>
+
+        <p>I'm creating:</p>
+
+        <ul>
+            <li>Training materials so someone else can do what I do</li>
+            <li>Standard operating procedures so "Sara's way" becomes "the way"</li>
+            <li>The 5-part accounting series so my clients understand the fundamentals, not just the reports I send them</li>
+            <li>Systems that survive me so my business isn't me, it's bigger than me</li>
+        </ul>
+
+        <p>I'm turning brilliance into infrastructure.</p>
+
+        <p>So if I step away—for a vacation, for an emergency, or someday for good—the lights don't go out.</p>
+
+        <h2>What I'm Learning</h2>
+
+        <div class="highlight-box">
+            <p><strong>1. "I can do it all" is not a compliment. It's a warning.</strong><br>
+            If you're the only one who can do it, you're not an asset—you're a liability.</p>
+
+            <p><strong>2. Busy doesn't mean effective.</strong><br>
+            I was working 60-hour weeks and still falling behind. Not because I wasn't working hard enough. Because I wasn't working smart.</p>
+
+            <p><strong>3. Your business should be able to survive without you.</strong><br>
+            Not because you're planning to leave. But because if it can't, you're not running a business—you're running a very expensive, very stressful job.</p>
+
+            <p><strong>4. Documentation feels like wasted time—until you need it.</strong><br>
+            Every hour I spend writing down what I do feels like an hour I could be billing. But it's an investment. In scalability. In sustainability. In sanity.</p>
+
+            <p><strong>5. Letting go of control is terrifying. And necessary.</strong><br>
+            Someone else won't do it exactly like I would. And that's okay. "Good enough" done by someone else is better than "perfect" that only I can deliver.</p>
+        </div>
+
+        <h2>Why I'm Sharing This</h2>
+
+        <p>Because I know I'm not the only one.</p>
+
+        <p>If you're reading this and thinking, "Oh shit, that's me"—you're right.</p>
+
+        <p>And you're not alone.</p>
+
+        <p>High-achievers do this. Perfectionists do this. People who care deeply about their work do this.</p>
+
+        <p>We build businesses on our backs because we know we can carry the weight.</p>
+
+        <p>But we forget that "can" doesn't mean "should."</p>
+
+        <p>And we forget that a business that depends entirely on us isn't a business—it's a prison we've built for ourselves.</p>
+
+        <h2>What You Can Do</h2>
+
+        <p>If this is resonating, here's where to start:</p>
+
+        <p><strong>1. Ask yourself the hard question:</strong> "If I disappeared for 30 days, what would happen?" If the answer terrifies you, you know what you need to fix.</p>
+
+        <p><strong>2. Pick one thing to document this week.</strong> Not everything. One process. One workflow. One thing you do that lives only in your head. Write it down. Test it with someone else. Refine it. That's how you start.</p>
+
+        <p><strong>3. Stop saying "It's faster if I just do it."</strong> Yes, it is. Today. But tomorrow you'll still be the bottleneck. And the day after that. And the day after that. Train someone. Even if it takes longer now. Even if they don't do it as well as you.</p>
+
+        <p><strong>4. Give yourself permission to not be perfect.</strong> You don't have to fix everything at once. You just have to start.</p>
+
+        <div class="blog-cta">
+            <h3>See yourself in this story?</h3>
+            <p>You don't have to figure this out alone. I didn't.</p>
+            <a href="contact.html">Let's Talk</a>
+        </div>
+
+        <p><em>Sara Hass<br>Founder, JNB LLC</em></p>
+    </article>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="JNB_LLC_OFFICIAL_LOGO_2026.png" alt="JNB LLC">
+        </div>
+        <p class="footer-tagline">We make the numbers make sense.</p>
+        
+        <p class="footer-legal">© 2026 JNB LLC. All rights reserved.</p>
+    </footer>
+</body>
+</html>

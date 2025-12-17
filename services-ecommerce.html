@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-63CXJJJX7E"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-63CXJJJX7E');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce & Amazon Seller Accounting | JNB LLC</title>
+    <meta name="description" content="Ecommerce bookkeeping and accounting for Amazon sellers, wholesalers, and FBA businesses. We mine your Amazon data to reveal true product margins, hidden fees, and profit leaks.">
+    <meta name="keywords" content="Amazon seller accounting, ecommerce bookkeeping, FBA accounting, Amazon FBA bookkeeper, wholesale accounting, Amazon profit margin calculator, Amazon fee analysis, ecommerce CFO, Amazon seller bookkeeper, FBA profitability, Amazon data analysis, wholesale margin tracking, Amazon reimbursement, ecommerce profit and loss, Amazon seller tax prep, FBA inventory accounting, Amazon cost of goods sold, wholesale product profitability, ecommerce financial reporting, Amazon business accounting">
+    <meta property="og:image" content="https://jnbservice.com/JNB_LLC_OFFICIAL_LOGO_2026.png">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --teal: #1a8a8a;
+            --teal-dark: #156b6b;
+            --teal-light: #e8f4f4;
+            --black: #1a1a1a;
+            --white: #ffffff;
+            --gray-50: #fafafa;
+            --gray-200: #e5e5e5;
+            --gray-400: #a3a3a3;
+            --gray-600: #525252;
+            --serif: 'Cormorant Garamond', Georgia, serif;
+            --sans: 'Outfit', -apple-system, sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--sans); font-weight: 400; color: var(--black); background: var(--white); line-height: 1.6; font-size: 17px; }
+        
+        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--gray-200); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: var(--black); }
+        .logo img { height: 50px; }
+        .logo-text { font-family: var(--serif); font-size: 1.5rem; font-weight: 500; }
+        .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+        .nav-links a { text-decoration: none; color: var(--gray-600); font-size: 0.95rem; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--teal); }
+        .nav-cta { background: var(--teal); color: var(--white) !important; padding: 0.6rem 1.25rem; border-radius: 6px; }
+        .nav-cta:hover { background: var(--teal-dark) !important; }
+
+        /* Hero */
+        .service-hero {
+            padding: 10rem 2rem 5rem;
+            background: linear-gradient(165deg, var(--black) 0%, #0d4a4a 100%);
+            color: var(--white);
+        }
+        .service-hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .service-hero h1 {
+            font-family: var(--serif);
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+        .service-hero p {
+            font-size: 1.25rem;
+            color: rgba(255,255,255,0.8);
+            font-weight: 300;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Problem Section */
+        .problem {
+            padding: 5rem 2rem;
+            background: var(--white);
+        }
+        .problem-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .problem h2 {
+            font-family: var(--serif);
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .problem-card {
+            background: var(--gray-50);
+            border-radius: 12px;
+            padding: 2rem;
+        }
+        .problem-card h3 {
+            font-family: var(--serif);
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            color: var(--black);
+        }
+        .problem-card p {
+            color: var(--gray-600);
+            font-weight: 300;
+            line-height: 1.7;
+        }
+
+        /* Data Mining Section */
+        .data-section {
+            padding: 5rem 2rem;
+            background: var(--teal);
+            color: var(--white);
+        }
+        .data-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .data-content h2 {
+            font-family: var(--serif);
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .data-content > p {
+            text-align: center;
+            color: rgba(255,255,255,0.85);
+            font-weight: 300;
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        .data-item {
+            background: rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+        .data-item h3 {
+            font-family: var(--serif);
+            font-size: 1.15rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        .data-item p {
+            color: rgba(255,255,255,0.8);
+            font-weight: 300;
+            font-size: 0.95rem;
+        }
+
+        /* Services Section */
+        .services-detail {
+            padding: 5rem 2rem;
+            background: var(--white);
+        }
+        .services-detail-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .services-detail h2 {
+            font-family: var(--serif);
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        .service-block {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 2rem;
+            padding: 2.5rem 0;
+            border-bottom: 1px solid var(--gray-200);
+        }
+        .service-block:last-child {
+            border-bottom: none;
+        }
+        .service-block h3 {
+            font-family: var(--serif);
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+        .service-block p {
+            color: var(--gray-600);
+            font-weight: 300;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        .service-block ul {
+            list-style: none;
+            padding: 0;
+        }
+        .service-block li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--gray-600);
+            font-weight: 300;
+        }
+        .service-block li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--teal);
+        }
+
+        /* Who We Help */
+        .who-section {
+            padding: 5rem 2rem;
+            background: var(--gray-50);
+        }
+        .who-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .who-content h2 {
+            font-family: var(--serif);
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        .who-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+        .who-item {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .who-item h3 {
+            font-family: var(--serif);
+            font-size: 1.15rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        .who-item p {
+            color: var(--gray-600);
+            font-weight: 300;
+            font-size: 0.9rem;
+        }
+
+        /* Results */
+        .results-section {
+            padding: 5rem 2rem;
+            background: var(--white);
+        }
+        .results-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .results-content h2 {
+            font-family: var(--serif);
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: 3rem;
+        }
+        .result-stat {
+            display: inline-block;
+            margin: 0 2rem 2rem;
+        }
+        .result-stat .number {
+            font-family: var(--serif);
+            font-size: 3rem;
+            font-weight: 500;
+            color: var(--teal);
+        }
+        .result-stat .label {
+            color: var(--gray-600);
+            font-size: 0.9rem;
+        }
+
+        /* SEO Content Block */
+        .seo-content {
+            padding: 4rem 2rem;
+            background: var(--gray-50);
+        }
+        .seo-content-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .seo-content h2 {
+            font-family: var(--serif);
+            font-size: 1.75rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+        .seo-content h3 {
+            font-family: var(--serif);
+            font-size: 1.35rem;
+            font-weight: 500;
+            margin: 2rem 0 1rem;
+        }
+        .seo-content p {
+            color: var(--gray-600);
+            font-weight: 300;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        /* CTA */
+        .page-cta {
+            background: var(--black);
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+        .page-cta h2 {
+            font-family: var(--serif);
+            font-size: 2.25rem;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+        .page-cta p {
+            color: var(--gray-400);
+            font-weight: 300;
+            margin-bottom: 2rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .page-cta a {
+            display: inline-block;
+            background: var(--teal);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        .page-cta a:hover {
+            background: var(--teal-dark);
+        }
+
+        footer { background: var(--gray-50); padding: 3rem 2rem; text-align: center; border-top: 1px solid var(--gray-200); }
+        .footer-logo { display: flex; align-items: center; justify-content: center; gap: 0.75rem; margin-bottom: 1rem; }
+        .footer-logo img { height: 70px; }
+        .footer-tagline { color: var(--gray-600); font-weight: 300; margin-bottom: 1.5rem; }
+        .footer-legal { color: var(--gray-400); font-size: 0.85rem; }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .service-hero { padding: 7rem 1.5rem 3rem; }
+            .service-block { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="JNB_LLC_OFFICIAL_LOGO_2026.png" alt="JNB LLC">
+            <span class="logo-text">JNB</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="training.html">Training</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html" class="nav-cta">Let's Talk</a></li>
+        </ul>
+    </nav>
+
+    <header class="service-hero">
+        <div class="service-hero-content">
+            <h1>Ecommerce & Amazon Seller Accounting</h1>
+            <p>We mine your Amazon data to show you true product margins—not what you think you're making, but what you're actually keeping.</p>
+        </div>
+    </header>
+
+    <section class="problem">
+        <div class="problem-content">
+            <h2>Amazon sellers don't have a bookkeeping problem. They have a visibility problem.</h2>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <h3>You know your revenue. Do you know your margins?</h3>
+                    <p>Amazon fees, FBA storage costs, advertising spend, returns, reimbursements—they all eat into profit. Most sellers can't tell you their true margin per SKU because the data is buried across a dozen reports.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>Wholesalers: Are your suppliers actually profitable?</h3>
+                    <p>You're moving volume, but which products are making money after Amazon's cut? Which suppliers have hidden margin killers? Without SKU-level analysis, you're guessing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="data-section">
+        <div class="data-content">
+            <h2>We Mine Your Amazon Data</h2>
+            <p>Amazon Seller Central is a goldmine of data—if you know how to extract it. We pull, clean, and analyze your reports to reveal what's really happening in your business.</p>
+            <div class="data-grid">
+                <div class="data-item">
+                    <h3>Settlement Reports</h3>
+                    <p>Every fee, refund, and adjustment mapped to your P&L</p>
+                </div>
+                <div class="data-item">
+                    <h3>FBA Fee Analysis</h3>
+                    <p>Fulfillment fees, storage fees, and long-term storage costs by SKU</p>
+                </div>
+                <div class="data-item">
+                    <h3>Inventory Reports</h3>
+                    <p>Stranded inventory, aged inventory, and restock recommendations</p>
+                </div>
+                <div class="data-item">
+                    <h3>Advertising Data</h3>
+                    <p>True ACOS and TACOS by product, campaign ROI analysis</p>
+                </div>
+                <div class="data-item">
+                    <h3>Returns & Reimbursements</h3>
+                    <p>Track what Amazon owes you and what's leaking to returns</p>
+                </div>
+                <div class="data-item">
+                    <h3>Margin by SKU</h3>
+                    <p>True profit after ALL costs—landed, fees, ads, returns</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-detail">
+        <div class="services-detail-content">
+            <h2>Ecommerce Accounting Services</h2>
+            
+            <div class="service-block">
+                <h3>Amazon Seller Bookkeeping</h3>
+                <div>
+                    <p>Monthly bookkeeping designed for Amazon and ecommerce businesses. We reconcile your Amazon settlements, track inventory, and categorize every fee so you know exactly where your money goes.</p>
+                    <ul>
+                        <li>Amazon settlement reconciliation</li>
+                        <li>Multi-channel sales tracking (Amazon, Shopify, Walmart)</li>
+                        <li>Inventory and COGS tracking</li>
+                        <li>Sales tax liability reporting</li>
+                        <li>Monthly P&L and cash flow statements</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-block">
+                <h3>SKU-Level Profitability Analysis</h3>
+                <div>
+                    <p>Stop guessing which products make money. We build dashboards that show true margin per SKU after accounting for landed cost, Amazon fees, advertising, returns, and overhead allocation.</p>
+                    <ul>
+                        <li>True landed cost calculation</li>
+                        <li>Amazon fee breakdown by product</li>
+                        <li>Advertising cost attribution</li>
+                        <li>Return rate impact analysis</li>
+                        <li>Contribution margin reporting</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-block">
+                <h3>Wholesale & Supplier Analysis</h3>
+                <div>
+                    <p>For wholesale Amazon sellers: we analyze profitability by supplier, identify margin killers, and help you make smarter purchasing decisions. Know which suppliers are worth scaling and which are dragging you down.</p>
+                    <ul>
+                        <li>Supplier profitability ranking</li>
+                        <li>Product portfolio analysis</li>
+                        <li>Reorder point optimization</li>
+                        <li>Dead stock identification</li>
+                        <li>Wholesale margin benchmarking</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-block">
+                <h3>FBA Inventory & Fee Optimization</h3>
+                <div>
+                    <p>Amazon's fees change constantly. We monitor your FBA costs, identify overcharges, file reimbursement claims, and help you optimize storage to reduce long-term storage fees.</p>
+                    <ul>
+                        <li>FBA fee auditing</li>
+                        <li>Reimbursement claim filing</li>
+                        <li>Storage fee optimization</li>
+                        <li>Inventory health monitoring</li>
+                        <li>Aged inventory liquidation planning</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="who-section">
+        <div class="who-content">
+            <h2>Who We Work With</h2>
+            <div class="who-grid">
+                <div class="who-item">
+                    <h3>Amazon FBA Sellers</h3>
+                    <p>Private label, wholesale, arbitrage</p>
+                </div>
+                <div class="who-item">
+                    <h3>Wholesale Distributors</h3>
+                    <p>High-volume, multi-supplier operations</p>
+                </div>
+                <div class="who-item">
+                    <h3>Multi-Channel Sellers</h3>
+                    <p>Amazon + Shopify + Walmart + eBay</p>
+                </div>
+                <div class="who-item">
+                    <h3>Ecommerce Brands</h3>
+                    <p>DTC brands expanding to Amazon</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="results-section">
+        <div class="results-content">
+            <h2>What Visibility Gets You</h2>
+            <div class="result-stat">
+                <div class="number">23%</div>
+                <div class="label">Average margin improvement</div>
+            </div>
+            <div class="result-stat">
+                <div class="number">$8K+</div>
+                <div class="label">Typical reimbursements recovered</div>
+            </div>
+            <div class="result-stat">
+                <div class="number">40%</div>
+                <div class="label">Time saved on financial admin</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="seo-content">
+        <div class="seo-content-inner">
+            <h2>Amazon Seller Accounting: Why It's Different</h2>
+            <p>Traditional bookkeeping doesn't work for Amazon sellers. The complexity of FBA fees, multi-state sales tax, inventory accounting, and constant fee changes requires specialized ecommerce accounting expertise.</p>
+            
+            <h3>The Amazon Fee Problem</h3>
+            <p>Amazon charges referral fees, FBA fulfillment fees, storage fees, long-term storage fees, removal fees, disposal fees, advertising fees, and more. These fees vary by category, product size, and time of year. Without proper Amazon fee tracking and analysis, you can't calculate true product profitability.</p>
+            
+            <h3>Inventory Accounting for Ecommerce</h3>
+            <p>Ecommerce inventory accounting requires tracking cost of goods sold (COGS) across multiple warehouses, understanding landed costs including freight and duties, and reconciling physical inventory with Amazon's records. We help Amazon sellers implement proper inventory valuation methods and track COGS accurately.</p>
+            
+            <h3>Amazon Data Analysis for Wholesalers</h3>
+            <p>Wholesale Amazon sellers face unique challenges: thin margins, high volume, and complex supplier relationships. Our Amazon data mining capabilities help wholesalers identify which products and suppliers are truly profitable after all Amazon fees are accounted for. We analyze your Amazon Business Reports, Settlement Reports, and Inventory Reports to build a complete picture of wholesale profitability.</p>
+            
+            <h3>Multi-Channel Ecommerce Accounting</h3>
+            <p>Selling on Amazon, Shopify, Walmart Marketplace, and eBay? We consolidate financial data across all channels, track inventory across warehouses, and provide unified reporting so you can see your entire ecommerce business in one place.</p>
+        </div>
+    </section>
+
+    <section class="page-cta">
+        <h2>Ready to see your true margins?</h2>
+        <p>Let's dig into your Amazon data and show you where the profit is hiding—and where it's leaking.</p>
+        <a href="contact.html">Get Started</a>
+    </section>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="JNB_LLC_OFFICIAL_LOGO_2026.png" alt="JNB LLC">
+        </div>
+        <p class="footer-tagline">We make the numbers make sense.</p>
+        
+        <p class="footer-legal">© 2026 JNB LLC. All rights reserved.</p>
+    </footer>
+</body>
+</html>

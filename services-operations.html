@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-63CXJJJX7E"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-63CXJJJX7E');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operations & People | JNB LLC</title>
+    <meta name="description" content="Business operations consulting for small businesses. Hiring strategy, process documentation, training systems, and scalable operations design.">
+    <meta property="og:image" content="https://jnbservice.com/JNB_LLC_OFFICIAL_LOGO_2026.png">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --teal: #1a8a8a;
+            --teal-dark: #156b6b;
+            --teal-light: #e8f4f4;
+            --black: #1a1a1a;
+            --white: #ffffff;
+            --gray-50: #fafafa;
+            --gray-200: #e5e5e5;
+            --gray-400: #a3a3a3;
+            --gray-600: #525252;
+            --serif: 'Cormorant Garamond', Georgia, serif;
+            --sans: 'Outfit', -apple-system, sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--sans); font-weight: 400; color: var(--black); background: var(--white); line-height: 1.6; font-size: 17px; }
+        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--gray-200); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: var(--black); }
+        .logo img { height: 50px; }
+        .logo-text { font-family: var(--serif); font-size: 1.5rem; font-weight: 500; }
+        .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+        .nav-links a { text-decoration: none; color: var(--gray-600); font-size: 0.95rem; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--teal); }
+        .nav-cta { background: var(--teal); color: var(--white) !important; padding: 0.6rem 1.25rem; border-radius: 6px; }
+        .nav-cta:hover { background: var(--teal-dark) !important; }
+        .page-hero { padding: 10rem 2rem 5rem; background: linear-gradient(165deg, var(--white) 0%, var(--teal-light) 100%); }
+        .page-hero-content { max-width: 800px; margin: 0 auto; text-align: center; }
+        .page-hero h1 { font-family: var(--serif); font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 500; margin-bottom: 1.5rem; }
+        .page-hero p { font-size: 1.2rem; color: var(--gray-600); font-weight: 300; max-width: 600px; margin: 0 auto 2rem; line-height: 1.7; }
+        .page-hero-cta { display: inline-block; background: var(--teal); color: var(--white); padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 500; transition: all 0.2s; }
+        .page-hero-cta:hover { background: var(--teal-dark); transform: translateY(-2px); }
+        .services-detail { padding: 5rem 2rem; }
+        .services-detail-content { max-width: 900px; margin: 0 auto; }
+        .service-block { margin-bottom: 4rem; padding-bottom: 4rem; border-bottom: 1px solid var(--gray-200); }
+        .service-block:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+        .service-block h2 { font-family: var(--serif); font-size: 1.75rem; font-weight: 500; margin-bottom: 1rem; }
+        .service-block p { color: var(--gray-600); font-weight: 300; line-height: 1.8; margin-bottom: 1rem; }
+        .service-block p:last-child { margin-bottom: 0; }
+        .highlight { color: var(--black); font-weight: 400; }
+        .callout { background: var(--gray-50); border-left: 3px solid var(--teal); padding: 1.5rem 2rem; margin: 2rem 0; border-radius: 0 8px 8px 0; }
+        .callout p { margin-bottom: 0; font-size: 1rem; }
+        .page-cta { background: var(--teal); padding: 5rem 2rem; text-align: center; }
+        .page-cta h2 { font-family: var(--serif); font-size: 2.25rem; color: var(--white); margin-bottom: 1rem; }
+        .page-cta p { color: rgba(255,255,255,0.85); font-weight: 300; margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto; }
+        .page-cta a { display: inline-block; background: var(--white); color: var(--teal); padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 500; transition: transform 0.2s; }
+        .page-cta a:hover { transform: translateY(-2px); }
+        footer { background: var(--gray-50); padding: 3rem 2rem; text-align: center; border-top: 1px solid var(--gray-200); }
+        .footer-logo { display: flex; align-items: center; justify-content: center; gap: 0.75rem; margin-bottom: 1rem; }
+        .footer-logo img { height: 70px; }
+        .footer-tagline { color: var(--gray-600); font-weight: 300; margin-bottom: 1.5rem; }
+        .footer-legal { color: var(--gray-400); font-size: 0.85rem; }
+        @media (max-width: 600px) { .nav-links { display: none; } .page-hero { padding: 7rem 1.5rem 3rem; } }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="JNB_LLC_OFFICIAL_LOGO_2026.png" alt="JNB LLC">
+            <span class="logo-text">JNB</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="training.html">Training</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html" class="nav-cta">Let's Talk</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-hero">
+        <div class="page-hero-content">
+            <h1>Operations & People</h1>
+            <p>Numbers don't mean anything without the right people and processes to execute. We help you build both.</p>
+            <a href="contact.html" class="page-hero-cta">Fix Your Operations</a>
+        </div>
+    </header>
+
+    <section class="services-detail">
+        <div class="services-detail-content">
+            <div class="service-block">
+                <h2>Hiring & Staffing Strategy</h2>
+                <p>Hiring is expensive. Hiring wrong is more expensive. Before you post that job ad, let's make sure you're hiring the right role at the right time.</p>
+                <p>We help you figure out: Do you actually need a full-time employee, or would a contractor work? What should you pay to get the person you need? How do you structure the role so they can actually succeed?</p>
+                <p><span class="highlight">And yes, we can help with the actual hiring too</span> - job descriptions, interview processes, offer letters, onboarding. The whole thing.</p>
+            </div>
+
+            <div class="service-block">
+                <h2>Process Documentation & Training</h2>
+                <p>If everything lives in your head, your business can't grow. At some point you need systems that other people can follow.</p>
+                <p>We help you document what you do, how you do it, and why - in a way that's actually useful. Not a 50-page manual nobody reads. Clear, practical documentation that lets you delegate without disaster.</p>
+                <p>We also build training programs so new people can get up to speed without you spending weeks hand-holding.</p>
+            </div>
+
+            <div class="service-block">
+                <h2>Scalable Systems Design</h2>
+                <p>The systems that worked when you had 3 employees break when you have 10. The process that was fine at $500K revenue falls apart at $2M.</p>
+                <p>We help you design operations that can grow with you. Scheduling systems, communication workflows, job tracking, invoicing processes - whatever's breaking, we can help fix it.</p>
+                <p><span class="highlight">Sometimes that means new software. Sometimes it means using what you have differently.</span> We'll figure out what actually makes sense for your situation.</p>
+            </div>
+
+            <div class="service-block">
+                <h2>Gap Analysis & Optimization</h2>
+                <p>Something's not working but you're not sure what. Revenue is up but profit is down. You're busier than ever but feeling less in control.</p>
+                <p>We dig in and find the gaps - where work is falling through the cracks, where money is leaking out, where people are wasting time on things that don't matter.</p>
+                <p>Then we help you fix it. Not with a fancy report you'll never look at again, but with specific changes you can implement.</p>
+            </div>
+
+            <div class="callout">
+                <p><strong>Operations work is often where the real problems are.</strong> Most clients come to us thinking they have a "books problem" or a "money problem." Usually it's an operations problem that shows up in the books. We can help with both.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-cta">
+        <h2>Ready to get your operations under control?</h2>
+        <p>Tell us what's breaking. We'll help you figure out how to fix it.</p>
+        <a href="contact.html">Get in Touch</a>
+    </section>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="JNB_LLC_OFFICIAL_LOGO_2026.png" alt="JNB LLC">
+        </div>
+        <p class="footer-tagline">We make the numbers make sense.</p>
+        
+        <p class="footer-legal">© 2026 JNB LLC. All rights reserved.</p>
+    </footer>
+</body>
+</html>
