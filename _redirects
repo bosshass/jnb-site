@@ -1,11 +1,50 @@
 # Force non-www (canonical)
 https://www.jnbservice.com/* https://jnbservice.com/:splat 301!
 
-# Fix old about-us link if anyone bookmarked it
-/about-us /about 301
+# Fix old links if anyone bookmarked them
+/about-us /about.html 301
+/aboutus /about.html 301
+/contact-us /contact.html 301
+/contactus /contact.html 301
+/services /index.html#services 301
 
-# Ensure trailing slashes don't break anything
-/about/ /about 301
-/contact/ /contact 301
-/blog/ /blog 301
-/training/ /training 301
+# Trailing slashes - Main pages
+/about/ /about.html 301
+/contact/ /contact.html 301
+/blog/ /blog.html 301
+/training/ /training.html 301
+/case-studies/ /case-studies.html 301
+
+# Trailing slashes - Service pages
+/services-accounting/ /services-accounting.html 301
+/services-cfo/ /services-cfo.html 301
+/services-ecommerce/ /services-ecommerce.html 301
+/services-operations/ /services-operations.html 301
+/services-profitability/ /services-profitability.html 301
+/services-web/ /services-web.html 301
+
+# Trailing slashes - Blog posts
+/blog-1-year-anniversary/ /blog-1-year-anniversary.html 301
+/blog-cant-delegate/ /blog-cant-delegate.html 301
+/blog-i-built-the-house/ /blog-i-built-the-house.html 301
+/blog-legend-of-1000-cranes/ /blog-legend-of-1000-cranes.html 301
+/blog-queen-of-doing-that/ /blog-queen-of-doing-that.html 301
+/blog-spire-lesson/ /blog-spire-lesson.html 301
+
+# Common alternate URLs people might try
+/home /index.html 301
+/home/ /index.html 301
+/index /index.html 301
+/index/ /index.html 301
+/cfo /services-cfo.html 301
+/accounting /services-accounting.html 301
+/bookkeeping /services-accounting.html 301
+/ecommerce /services-ecommerce.html 301
+/amazon /services-ecommerce.html 301
+/operations /services-operations.html 301
+/profitability /services-profitability.html 301
+/web /services-web.html 301
+/marketing /services-web.html 301
+
+# Catch-all: Send unknown pages to 404 page (not a redirect loop)
+/* /404.html 404
