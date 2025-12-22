@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floor Rate | Module 1 | JNB LLC Training</title>
+    <meta name="description" content="Learn how to calculate your floor rate - the minimum you must bill per hour just to break even. Most service business owners have never calculated this.">
+    <link rel="icon" type="image/png" href="/JNB_LLC_OFFICIAL_LOGO_2026.png">
+    
+    <meta property="og:title" content="Floor Rate: The Number Every Service Business Owner Needs to Know">
+    <meta property="og:description" content="A $52,000 employee doesn't cost $25/hour. Here's the real math.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://jnbservice.com/training/floor-rate">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root { --teal: #4A9B9B; --dark: #1a1a2e; --light: #f8f9fa; --gray: #6c757d; --orange: #e07c3e; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+        
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 5%; background: var(--dark); position: sticky; top: 0; z-index: 100; }
+        .logo { display: flex; align-items: center; gap: 0.5rem; color: white; font-weight: 700; text-decoration: none; }
+        .logo img { height: 40px; }
+        .nav-links { display: flex; list-style: none; gap: 2rem; align-items: center; }
+        .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--teal); }
+        .nav-cta { background: var(--teal); color: white !important; padding: 0.5rem 1rem; border-radius: 6px; }
+        
+        .mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
+        .mobile-menu-btn span { display: block; width: 25px; height: 3px; background: white; margin: 5px 0; transition: 0.3s; }
+        .mobile-menu-btn.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .mobile-menu-btn.active span:nth-child(2) { opacity: 0; }
+        .mobile-menu-btn.active span:nth-child(3) { transform: rotate(-45deg) translate(7px, -6px); }
+        
+        .hero { background: var(--dark); color: white; padding: 4rem 5% 3rem; text-align: center; }
+        .hero-badge { display: inline-block; background: var(--teal); padding: 0.35rem 0.85rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-bottom: 1rem; }
+        .hero h1 { font-size: 2.75rem; margin-bottom: 0.75rem; }
+        .hero p { font-size: 1.15rem; opacity: 0.85; }
+        
+        .content { max-width: 750px; margin: 0 auto; padding: 3rem 1.5rem; }
+        .content h2 { font-size: 1.6rem; color: var(--teal); margin: 2.5rem 0 1rem; }
+        .content h3 { font-size: 1.25rem; margin: 2rem 0 0.75rem; }
+        .content p { margin-bottom: 1.25rem; font-size: 1.05rem; }
+        .content ul, .content ol { margin: 1.25rem 0 1.25rem 1.5rem; }
+        .content li { margin-bottom: 0.5rem; }
+        .content strong { color: var(--dark); }
+        
+        .callout { background: #e8f4f4; border-left: 4px solid var(--teal); padding: 1.25rem 1.5rem; margin: 1.5rem 0; border-radius: 0 8px 8px 0; }
+        .callout p { margin: 0; }
+        
+        .formula { background: var(--dark); color: white; padding: 1.25rem; border-radius: 8px; text-align: center; font-size: 1.1rem; font-weight: 600; margin: 1.5rem 0; }
+        
+        table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem; }
+        th, td { padding: 0.75rem; text-align: left; border-bottom: 1px solid #e0e0e0; }
+        th { background: var(--dark); color: white; font-weight: 600; }
+        tr:hover { background: #f5f5f5; }
+        .text-right { text-align: right; }
+        
+        .bottom-line { background: #fff3e6; border: 2px solid var(--orange); padding: 1.5rem; border-radius: 12px; margin: 2rem 0; }
+        .bottom-line h3 { color: var(--orange); margin-bottom: 0.75rem; }
+        .bottom-line ul { margin: 0.75rem 0 0 1.25rem; }
+        
+        .module-nav { display: flex; justify-content: space-between; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #e0e0e0; }
+        .module-nav a { color: var(--teal); text-decoration: none; font-weight: 500; }
+        .module-nav a:hover { text-decoration: underline; }
+        
+        footer { text-align: center; padding: 2rem; color: var(--gray); font-size: 0.9rem; background: var(--dark); color: rgba(255,255,255,0.7); }
+        footer a { color: var(--teal); }
+        
+        .small { font-size: 0.85rem; color: var(--gray); }
+        
+        @media (max-width: 768px) {
+            .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--dark); flex-direction: column; padding: 1rem 5%; gap: 1rem; }
+            .nav-links.active { display: flex; }
+            .mobile-menu-btn { display: block; }
+            .hero h1 { font-size: 2rem; }
+            .content { padding: 2rem 1rem; }
+            .module-nav { flex-direction: column; gap: 1rem; text-align: center; }
+            table { font-size: 0.85rem; }
+            th, td { padding: 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/" class="logo">
+            <img src="/JNB_LLC_OFFICIAL_LOGO_2026.png" alt="JNB LLC">
+            <span>JNB</span>
+        </a>
+        <button class="mobile-menu-btn" id="mobile-menu-btn">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="/#services">Services</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/training">Training</a></li>
+            <li><a href="/contact" class="nav-cta">Let's Talk</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <span class="hero-badge">Module 1 of 6</span>
+        <h1>Floor Rate</h1>
+        <p>The minimum you must bill just to break even</p>
+    </header>
+
+    <main class="content">
+        <h2>The $25/Hour Mirage</h2>
+        <p>A $52,000 employee looks like they cost $25 an hour. The math seems simple: $52,000 ÷ 2,080 hours (40 hrs × 52 weeks) = $25/hr.</p>
+        <p><strong>That number is clean. Controlled. And completely wrong.</strong></p>
+        <p>Two assumptions are hiding the truth:</p>
+        <ul>
+            <li>You're not paying $52,000. You're paying more.</li>
+            <li>You're not getting 2,080 hours. You're getting less.</li>
+        </ul>
+        <p>When you fix both assumptions, $25/hour becomes $36/hour—or higher. That's your <strong>floor rate</strong>: the actual cost per billable hour. Anything you bill below that number means you're paying the client to take your time.</p>
+
+        <h2>Step 1: Calculate True Cost</h2>
+        <p>Salary is just the starting point. Here's what that $52,000 employee actually costs you:</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th class="text-right">Amount</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Base Salary</td>
+                    <td class="text-right">$52,000</td>
+                    <td>What they see on their offer letter</td>
+                </tr>
+                <tr>
+                    <td>Payroll Taxes (7.65%)</td>
+                    <td class="text-right">$3,978</td>
+                    <td>Social Security + Medicare (employer portion)</td>
+                </tr>
+                <tr>
+                    <td>Health Insurance</td>
+                    <td class="text-right">$6,000</td>
+                    <td>Your contribution (~$500/mo is common)</td>
+                </tr>
+                <tr>
+                    <td>Workers Comp</td>
+                    <td class="text-right">$1,560</td>
+                    <td>~3% for trades, varies by industry</td>
+                </tr>
+                <tr>
+                    <td>401k Match</td>
+                    <td class="text-right">$1,040</td>
+                    <td>If you offer 2% match</td>
+                </tr>
+                <tr>
+                    <td>Software/Tools</td>
+                    <td class="text-right">$1,200</td>
+                    <td>Licenses, subscriptions per seat</td>
+                </tr>
+                <tr>
+                    <td>Overhead Allocation</td>
+                    <td class="text-right">$2,000</td>
+                    <td>Rent, insurance, admin—spread per head</td>
+                </tr>
+                <tr>
+                    <td><strong>TRUE ANNUAL COST</strong></td>
+                    <td class="text-right"><strong>$67,778</strong></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="small">Your numbers will vary. The point is: it's never just the salary.</p>
+
+        <h2>Step 2: Calculate Available Billable Hours</h2>
+        <p>Now the other half of the equation. That 2,080 hours? Here's what actually happens:</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th class="text-right">Hours</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Starting Hours (40 × 52)</td>
+                    <td class="text-right">2,080</td>
+                </tr>
+                <tr>
+                    <td>PTO (3 weeks)</td>
+                    <td class="text-right">-120</td>
+                </tr>
+                <tr>
+                    <td>Holidays (8 days)</td>
+                    <td class="text-right">-64</td>
+                </tr>
+                <tr>
+                    <td>Sick Days (5 days avg)</td>
+                    <td class="text-right">-40</td>
+                </tr>
+                <tr>
+                    <td>Admin/Meetings (~5 hrs/wk)</td>
+                    <td class="text-right">-235</td>
+                </tr>
+                <tr>
+                    <td>Training</td>
+                    <td class="text-right">-40</td>
+                </tr>
+                <tr>
+                    <td>Travel (non-billable)</td>
+                    <td class="text-right">-100</td>
+                </tr>
+                <tr>
+                    <td><strong>AVAILABLE BILLABLE HOURS</strong></td>
+                    <td class="text-right"><strong>1,481</strong></td>
+                </tr>
+            </tbody>
+        </table>
+        <p>That's 71% of "full time." And this is optimistic—many businesses run closer to 60-65%.</p>
+
+        <h2>Step 3: The Floor Rate Formula</h2>
+        
+        <div class="formula">
+            Floor Rate = True Cost ÷ Available Billable Hours
+        </div>
+        
+        <p>Using our numbers:</p>
+        <div class="formula">
+            $67,778 ÷ 1,481 = $45.76/hour
+        </div>
+        
+        <div class="callout">
+            <p><strong>That's your floor.</strong> Not your rate—your floor. Bill below $45.76 and you're losing money on every hour, no matter how "busy" you feel.</p>
+        </div>
+
+        <h2>Why This Matters</h2>
+        <p>Most service businesses set prices based on:</p>
+        <ul>
+            <li>What competitors charge</li>
+            <li>What feels "fair"</li>
+            <li>What clients will accept without pushback</li>
+        </ul>
+        <p>None of these have anything to do with whether you make money.</p>
+        <p>Floor rate gives you a hard boundary: below this number, you're subsidizing your clients' businesses with your own. Above it, you're starting to build margin.</p>
+
+        <div class="bottom-line">
+            <h3>Bottom Line</h3>
+            <ul>
+                <li>Floor rate = True Cost ÷ Available Billable Hours</li>
+                <li>It's always higher than the hourly wage—often 40-50% higher</li>
+                <li>Billing below floor = guaranteed loss, no matter how "busy" you are</li>
+                <li>You can't set prices, evaluate jobs, or plan hiring until you know this number</li>
+            </ul>
+        </div>
+
+        <h2>What's Next</h2>
+        <p>Now you know what each person costs per billable hour. But that's just survival—break-even. In <strong>Module 2: The Survival Number</strong>, we'll calculate what the whole business needs to stay alive: fixed costs, liabilities, owner's draw, and what's actually left after all of it.</p>
+        <p>Because floor rate tells you if a single hour is profitable. The survival number tells you if the <em>business</em> is.</p>
+
+        <nav class="module-nav">
+            <a href="/training">← Back to Training Hub</a>
+            <a href="/training/survival-number">Module 2: The Survival Number →</a>
+        </nav>
+    </main>
+
+    <footer>
+        <p>© 2026 JNB LLC · <a href="/contact">Let's Talk</a> · jnbservice.com</p>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.getElementById('nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
