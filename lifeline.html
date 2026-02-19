@@ -20,7 +20,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    
 </head>
 <body>
     <nav>
@@ -37,7 +36,7 @@
             <li class="nav-dropdown">
                 <a href="services/index.html" class="nav-dropdown-toggle">Services <svg width="10" height="6" viewBox="0 0 10 6" style="margin-left:4px;vertical-align:middle;"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></a>
                 <ul class="nav-dropdown-menu">
-                    <li><a href="services/bookkeeping-accounting.html">Bookkeeping & Accounting</a></li>
+                    <li><a href="services/bookkeeping-accounting.html">Bookkeeping &amp; Accounting</a></li>
                     <li><a href="services/tax-preparation.html">Tax Preparation</a></li>
                     <li><a href="services/fractional-cfo.html">Fractional CFO</a></li>
                     <li><a href="services/financial-systems.html">Financial Systems</a></li>
@@ -49,40 +48,210 @@
             <li><a href="contact.html" class="nav-cta">Let's Talk</a></li>
         </ul>
     </nav>
-    
-    <section class="page-hero">
-        <div class="page-hero-content">
-            <h1>Lifeline</h1>
-            <p>Your business at a glance. Coming soon.</p>
+
+    <!-- HERO: Dark cinematic with video -->
+    <section class="ll-hero">
+        <div class="ll-hero-inner">
+            <div class="ll-hero-text">
+                <span class="ll-badge">COMING SOON</span>
+                <h1>Lifeline</h1>
+                <p class="ll-tagline">Your business has a pulse.<br>Now you can see it.</p>
+            </div>
+            <div class="ll-hero-video">
+                <video autoplay muted loop playsinline poster="images/lifeline-poster.png">
+                    <source src="images/lifeline-animation.mp4" type="video/mp4">
+                </video>
+            </div>
         </div>
     </section>
-    
-    <section class="content-section">
-        <div class="content-wrapper" style="text-align: center;">
-            <p style="font-size: 1.2rem;">A clear, at-a-glance financial dashboard built for business owners.</p>
-            
-            <p style="font-size: 1.3rem; font-weight: 500; margin: 2rem 0;">
-                Revenue.<br>
-                Cash flow.<br>
-                Utilization.<br>
-                Pipeline.
-            </p>
-            
-            <p>No digging. No spreadsheet gymnastics. No guessing.</p>
-            
-            <p>Built for owners who want visibility without overwhelm.</p>
-            
-            <p style="margin-top: 3rem; font-style: italic; color: var(--gray-soft);">Launching soon. Want early access?</p>
+
+    <!-- WHAT IT IS -->
+    <section class="f-section">
+        <div class="f-wide">
+            <div class="f-intro">
+                <p>Lifeline is a clear, at-a-glance financial dashboard built for business owners who want to know where they stand &mdash; without digging through spreadsheets, waiting for reports, or asking their bookkeeper every week.</p>
+                <p class="f-accent">Revenue. Cash flow. Utilization. Pipeline. One screen. No noise.</p>
+            </div>
         </div>
     </section>
-    
+
+    <!-- B&W MOCKUP DASHBOARD SCREENSHOTS -->
+    <section class="f-section ll-screens-section">
+        <div class="f-wide">
+            <h2 class="f-section-title" style="text-align: center;">What you'll see</h2>
+            <div class="ll-screen-grid">
+
+                <div class="ll-screen-card">
+                    <div class="ll-mockup">
+                        <div class="ll-mockup-bar">
+                            <span class="ll-dot"></span><span class="ll-dot"></span><span class="ll-dot"></span>
+                            <span class="ll-mockup-title">Revenue</span>
+                        </div>
+                        <div class="ll-mockup-body">
+                            <div class="ll-mock-big">$47,200</div>
+                            <div class="ll-mock-sub">MTD &nbsp;&bull;&nbsp; <span class="ll-mock-up">&uarr; 12.4%</span></div>
+                            <div class="ll-mock-chart">
+                                <div class="ll-bar" style="height: 40%;"></div>
+                                <div class="ll-bar" style="height: 55%;"></div>
+                                <div class="ll-bar" style="height: 45%;"></div>
+                                <div class="ll-bar" style="height: 70%;"></div>
+                                <div class="ll-bar" style="height: 60%;"></div>
+                                <div class="ll-bar" style="height: 80%;"></div>
+                                <div class="ll-bar ll-bar-current" style="height: 90%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Revenue Tracking</h3>
+                    <p>Month-to-date, year-over-year, by service line. See it without running a report.</p>
+                </div>
+
+                <div class="ll-screen-card">
+                    <div class="ll-mockup">
+                        <div class="ll-mockup-bar">
+                            <span class="ll-dot"></span><span class="ll-dot"></span><span class="ll-dot"></span>
+                            <span class="ll-mockup-title">Cash Flow</span>
+                        </div>
+                        <div class="ll-mockup-body">
+                            <div class="ll-mock-big">$31,800</div>
+                            <div class="ll-mock-sub">Available &nbsp;&bull;&nbsp; 6-week forecast</div>
+                            <div class="ll-mock-wave">
+                                <svg viewBox="0 0 200 60" preserveAspectRatio="none">
+                                    <path d="M0,45 C20,40 40,20 60,25 C80,30 100,10 120,15 C140,20 160,35 180,20 C190,15 200,18 200,18 L200,60 L0,60 Z" fill="rgba(100,100,100,0.12)"/>
+                                    <path d="M0,45 C20,40 40,20 60,25 C80,30 100,10 120,15 C140,20 160,35 180,20 C190,15 200,18 200,18" stroke="#888" stroke-width="2" fill="none"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Cash Flow Forecasting</h3>
+                    <p>Know what's coming in, what's going out, and where the gaps are before they hit.</p>
+                </div>
+
+                <div class="ll-screen-card">
+                    <div class="ll-mockup">
+                        <div class="ll-mockup-bar">
+                            <span class="ll-dot"></span><span class="ll-dot"></span><span class="ll-dot"></span>
+                            <span class="ll-mockup-title">Utilization</span>
+                        </div>
+                        <div class="ll-mockup-body">
+                            <div class="ll-mock-big">74%</div>
+                            <div class="ll-mock-sub">Team avg &nbsp;&bull;&nbsp; Target: 80%</div>
+                            <div class="ll-mock-meters">
+                                <div class="ll-meter"><div class="ll-meter-fill" style="width: 82%;"></div><span>Tech A</span></div>
+                                <div class="ll-meter"><div class="ll-meter-fill" style="width: 71%;"></div><span>Tech B</span></div>
+                                <div class="ll-meter"><div class="ll-meter-fill" style="width: 68%;"></div><span>Tech C</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Utilization Tracking</h3>
+                    <p>See who's booked, who has capacity, and where the bottlenecks are at a glance.</p>
+                </div>
+
+                <div class="ll-screen-card">
+                    <div class="ll-mockup">
+                        <div class="ll-mockup-bar">
+                            <span class="ll-dot"></span><span class="ll-dot"></span><span class="ll-dot"></span>
+                            <span class="ll-mockup-title">Pipeline</span>
+                        </div>
+                        <div class="ll-mockup-body">
+                            <div class="ll-mock-big">$128K</div>
+                            <div class="ll-mock-sub">Weighted pipeline &nbsp;&bull;&nbsp; 14 active</div>
+                            <div class="ll-mock-pipeline">
+                                <div class="ll-pipe-stage"><span class="ll-pipe-bar" style="width: 90%;"></span><span class="ll-pipe-label">Lead</span></div>
+                                <div class="ll-pipe-stage"><span class="ll-pipe-bar" style="width: 65%;"></span><span class="ll-pipe-label">Proposal</span></div>
+                                <div class="ll-pipe-stage"><span class="ll-pipe-bar" style="width: 40%;"></span><span class="ll-pipe-label">Negotiation</span></div>
+                                <div class="ll-pipe-stage"><span class="ll-pipe-bar" style="width: 25%;"></span><span class="ll-pipe-label">Close</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Pipeline Visibility</h3>
+                    <p>Track what's coming next. Weighted revenue by stage so you plan, not react.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE PROBLEM / THE SHIFT -->
+    <section class="f-section f-alt">
+        <div class="f-wide">
+            <div class="f-split">
+                <div class="f-split-left">
+                    <h2>The Problem It Solves</h2>
+                </div>
+                <div class="f-split-right">
+                    <p>You know the feeling. Someone asks you a simple question about your business &mdash; how much revenue this month, how much cash is available, whether you can afford a hire &mdash; and you can't answer it without digging.</p>
+                    <p>Not because you're disorganized. Because the data lives in 4 different places and nobody built you a single view.</p>
+                </div>
+            </div>
+            <div class="f-split" style="margin-top: 4rem;">
+                <div class="f-split-left">
+                    <h2>What Changes</h2>
+                </div>
+                <div class="f-split-right">
+                    <p>You open one screen. You see it all. Revenue trending. Cash position clear. Team loaded or underloaded. Pipeline moving or stalled.</p>
+                    <p>No digging. No spreadsheet gymnastics. No guessing. Just clarity, at a glance, every time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHO IT'S FOR -->
+    <section class="f-section">
+        <div class="f-wide">
+            <h2 class="f-section-title">Built for owners who think in questions</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>"Can I afford to hire?"</h3>
+                    <p>Current cash, projected cash, and payroll load &mdash; the answer is obvious before you ask it.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>"Are we actually profitable?"</h3>
+                    <p>Revenue vs. expense, margin by service line, and trailing trends &mdash; no P&amp;L required.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>"Why does growth feel harder?"</h3>
+                    <p>Utilization and capacity data show where your team is stretched and where you're leaving money.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>"What's coming next?"</h3>
+                    <p>Pipeline tracking with weighted revenue gives you forward visibility. Planning, not reacting.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="f-section f-alt">
+        <div class="f-wide">
+            <div class="f-split">
+                <div class="f-split-left">
+                    <h2>How It Works</h2>
+                </div>
+                <div class="f-split-right">
+                    <p>Lifeline connects to your existing accounting data, operational tools, and reporting systems. We configure it around what matters to your business &mdash; not a generic template.</p>
+                    <p>It's a premium custom add-on, designed and built over a focused 2-week sprint. Your dashboard, your metrics, your clarity.</p>
+                </div>
+            </div>
+            <div class="f-split" style="margin-top: 4rem;">
+                <div class="f-split-left">
+                    <h2>Who Gets It First</h2>
+                </div>
+                <div class="f-split-right">
+                    <p>Lifeline is built for existing JNB LLC clients first &mdash; business owners whose books are already stable and who are ready for the next level of visibility.</p>
+                    <p>If you're not a current client, start with a conversation. We'll figure out where you are and what makes sense.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EARLY ACCESS CTA -->
     <section class="cta-section">
         <div class="cta-content">
-            <h2>Ready to talk?</h2>
-            <p>No pitch deck. No weird sales funnel. Just an honest conversation about where you are and whether we can help.</p>
-            <a href="contact.html" class="btn btn-primary">Start a Conversation</a>
+            <h2>Want early access?</h2>
+            <p>Lifeline is launching soon. If you want to be first in line &mdash; or just want to see what it looks like &mdash; reach out.</p>
+            <a href="contact.html" class="btn btn-primary">Get on the List</a>
         </div>
     </section>
+
     <footer>
         <div class="footer-content">
             <div class="footer-brand">
@@ -110,7 +279,7 @@
             <p>&copy; 2026 JNB LLC. All rights reserved. Based in Littleton, Colorado.</p>
         </div>
     </footer>
-    
+
     <script src="main.js"></script>
 </body>
 </html>
