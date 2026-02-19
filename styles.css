@@ -828,6 +828,306 @@ nav {
     padding: 0 2rem;
 }
 
+/* ============================================
+   F-PATTERN LAYOUT SYSTEM
+   Wide layouts, visual grids, breathing room
+   ============================================ */
+
+/* Section wrapper — generous vertical space */
+.f-section {
+    padding: 6rem 0;
+    background: var(--warm-white);
+}
+
+.f-section.f-alt {
+    background: var(--warm-cream);
+}
+
+/* Wide content wrapper — uses full page */
+.f-wide {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 3rem;
+}
+
+/* Intro text — large, left-aligned, breathing room */
+.f-intro {
+    max-width: 900px;
+}
+
+.f-intro p {
+    font-size: 1.35rem;
+    line-height: 1.8;
+    color: var(--gray-warm);
+    margin-bottom: 1.5rem;
+}
+
+.f-intro .f-accent {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--charcoal);
+    border-left: 4px solid var(--teal);
+    padding-left: 1.5rem;
+    margin-top: 2rem;
+    line-height: 1.5;
+}
+
+/* Section titles */
+.f-section-title {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 500;
+    color: var(--charcoal);
+    margin-bottom: 3rem;
+}
+
+/* 2x2 Feature Card Grid */
+.feature-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+}
+
+.feature-grid-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.feature-card {
+    background: var(--warm-white);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem;
+    border-left: 4px solid var(--teal);
+    box-shadow: var(--shadow-soft);
+    transition: all 0.3s ease;
+}
+
+.f-alt .feature-card {
+    background: #ffffff;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+.feature-card h3 {
+    font-family: var(--serif);
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--charcoal);
+    margin-bottom: 1rem;
+}
+
+.feature-card p {
+    color: var(--gray-warm);
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+/* 2x2 Service Card Grid (overview page) */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+}
+
+.f-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--warm-cream);
+    border-radius: var(--radius-lg);
+    padding: 3rem;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.4s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    border-bottom: 4px solid transparent;
+}
+
+.f-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.f-card:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: var(--shadow-hover);
+    border-bottom-color: var(--teal);
+}
+
+.f-card-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--teal-light) 0%, var(--teal-glow) 100%);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+.f-card-icon svg {
+    width: 35px;
+    height: 35px;
+    stroke: var(--teal);
+    stroke-width: 1.5;
+    fill: none;
+}
+
+.f-card:hover .f-card-icon {
+    background: var(--teal);
+}
+
+.f-card:hover .f-card-icon svg {
+    stroke: var(--warm-white);
+}
+
+.f-card h3 {
+    font-family: var(--serif);
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--charcoal);
+    margin-bottom: 1rem;
+}
+
+.f-card p {
+    color: var(--gray-warm);
+    line-height: 1.7;
+    font-size: 1.1rem;
+    flex-grow: 1;
+}
+
+.f-card-link {
+    display: inline-block;
+    margin-top: 1.5rem;
+    color: var(--teal);
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: all 0.3s ease;
+}
+
+.f-card:hover .f-card-link {
+    transform: translateX(6px);
+}
+
+/* Split Section — headline left, body right */
+.f-split {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.f-split-left h2 {
+    font-family: var(--serif);
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 500;
+    color: var(--charcoal);
+    line-height: 1.3;
+    position: sticky;
+    top: 8rem;
+}
+
+.f-split-right p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--gray-warm);
+    margin-bottom: 1.25rem;
+}
+
+.f-split-right p:last-child {
+    margin-bottom: 0;
+}
+
+/* Crosslink bar */
+.f-crosslink {
+    font-style: italic;
+    font-size: 1.15rem;
+    color: var(--gray-soft);
+}
+
+.f-crosslink a {
+    color: var(--teal);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.f-crosslink a:hover {
+    color: var(--charcoal);
+}
+
+/* F-PATTERN RESPONSIVE */
+@media (max-width: 1100px) {
+    .feature-grid-3 {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 900px) {
+    .f-wide {
+        padding: 0 1.5rem;
+    }
+
+    .f-split {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .f-split-left h2 {
+        position: static;
+    }
+
+    .feature-grid,
+    .feature-grid-3 {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .f-section {
+        padding: 4rem 0;
+    }
+
+    .f-wide {
+        padding: 0 1rem;
+    }
+
+    .feature-grid,
+    .feature-grid-3,
+    .card-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .f-card {
+        padding: 2rem;
+    }
+
+    .feature-card {
+        padding: 2rem;
+    }
+
+    .f-intro p {
+        font-size: 1.15rem;
+    }
+
+    .f-intro .f-accent {
+        font-size: 1.25rem;
+    }
+}
+
 /* Article Styles */
 .article {
     padding: 5rem 0;
