@@ -1,31 +1,32 @@
-# Service pages
-/services-accounting /services-accounting.html 200
-/services-cfo /services-cfo.html 200
-/services-coo /services-coo.html 200
-/services-web /services-web.html 200
-/services-operations /services-operations.html 200
-/services-ecommerce /services-ecommerce.html 200
+# Old service pages → new structure
+/services-accounting       /services/bookkeeping-accounting   301
+/services-accounting.html  /services/bookkeeping-accounting   301
+/services-cfo              /services/fractional-cfo           301
+/services-cfo.html         /services/fractional-cfo           301
+/services-coo              /services/fractional-cfo           301
+/services-coo.html         /services/fractional-cfo           301
+/services-web              /services/financial-systems        301
+/services-web.html         /services/financial-systems        301
+/services-operations       /services/financial-systems        301
+/services-operations.html  /services/financial-systems        301
+/services-ecommerce        /services/bookkeeping-accounting   301
+/services-ecommerce.html   /services/bookkeeping-accounting   301
 
-# Core pages
-/about /about.html 200
-/contact /contact.html 200
-/blog /blog.html 200
-/training /training.html 200
-/services /index.html#services 301
+# Old training pages → homepage
+/training                          /                          301
+/training.html                     /                          301
+/training/survival-number          /                          301
+/training/survival-number.html     /                          301
+/training/floor-rate               /                          301
+/training/floor-rate.html          /                          301
+/training/realized-rate            /                          301
+/training/realized-rate.html       /                          301
+/training/utilization              /                          301
+/training/utilization.html         /                          301
+/training/capacity                 /                          301
+/training/capacity.html            /                          301
+/training/client-profitability     /                          301
+/training/client-profitability.html /                         301
 
-# Legacy redirect
-/about-us /about.html 301
-
-# Blog posts
-/blog-owl-lessons /blog-owl-lessons.html 200
-/blog-the-pacesetter /blog-the-pacesetter.html 200
-/blog-spire-lesson /blog-spire-lesson.html 200
-/blog-i-built-the-house /blog-i-built-the-house.html 200
-
-# Training modules
-/training/floor-rate /training/floor-rate.html 200
-/training/survival-number /training/survival-number.html 200
-/training/utilization /training/utilization.html 200
-/training/realized-rate /training/realized-rate.html 200
-/training/capacity /training/capacity.html 200
-/training/client-profitability /training/client-profitability.html 200
+# SPA fallback
+/*    /404.html    404

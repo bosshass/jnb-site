@@ -12,9 +12,9 @@
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <nav>
-        <a href="/index.html" class="logo">
-            <img src="/JNB_LLC_OFFICIAL_LOGO_2026.png" alt="JNB LLC">
+        <nav>
+        <a href="index.html" class="logo">
+            <img src="JNB_LLC_OFFICIAL_LOGO_2026.png" alt="JNB LLC">
             <span class="logo-text">JNB LLC</span>
         </a>
         <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
@@ -23,11 +23,19 @@
             <span></span>
         </button>
         <ul class="nav-links">
-            <li><a href="/about.html">About</a></li>
-            <li><a href="/index.html#services">Services</a></li>
-            <li><a href="/blog.html">Blog</a></li>
-            <li><a href="/training.html">Training</a></li>
-            <li><a href="/contact.html" class="nav-cta">Let's Talk</a></li>
+            <li class="nav-dropdown">
+                <a href="services/index.html" class="nav-dropdown-toggle">Services <svg width="10" height="6" viewBox="0 0 10 6" style="margin-left:4px;vertical-align:middle;"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></a>
+                <ul class="nav-dropdown-menu">
+                    <li><a href="services/bookkeeping-accounting.html">Bookkeeping & Accounting</a></li>
+                    <li><a href="services/tax-preparation.html">Tax Preparation</a></li>
+                    <li><a href="services/fractional-cfo.html">Fractional CFO</a></li>
+                    <li><a href="services/financial-systems.html">Financial Systems</a></li>
+                </ul>
+            </li>
+            <li><a href="lifeline.html">Lifeline</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html" class="nav-cta">Let's Talk</a></li>
         </ul>
     </nav>
     
@@ -43,35 +51,35 @@
             <h2>Try one of these instead:</h2>
             <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; margin-top: 2rem;">
                 <a href="/" class="btn btn-primary">Homepage</a>
-                <a href="/services-accounting.html" class="btn btn-secondary">Bookkeeping</a>
-                <a href="/services-cfo.html" class="btn btn-secondary">Fractional CFO</a>
+                <a href="/services/bookkeeping-accounting.html" class="btn btn-secondary">Bookkeeping</a>
+                <a href="/services/fractional-cfo.html" class="btn btn-secondary">Fractional CFO</a>
                 <a href="/blog.html" class="btn btn-secondary">Blog</a>
                 <a href="/contact.html" class="btn btn-secondary">Contact</a>
             </div>
         </div>
     </section>
     
-    <footer>
+        <footer>
         <div class="footer-content">
             <div class="footer-brand">
-                <img src="/JNB_LLC_OFFICIAL_LOGO_2026.png" alt="JNB LLC">
+                <img src="JNB_LLC_OFFICIAL_LOGO_2026.png" alt="JNB LLC">
                 <p>We make the numbers make sense.</p>
                 <p style="margin-top: 1rem;"><a href="tel:720-750-0063" style="color: var(--teal-soft);">(720) 750-0063</a></p>
                 <p><a href="mailto:sara@jnbservice.com" style="color: var(--teal-soft);">sara@jnbservice.com</a></p>
             </div>
             <div class="footer-links">
                 <h4>Services</h4>
-                <a href="/services-accounting.html">Bookkeeping</a>
-                <a href="/services-cfo.html">Fractional CFO</a>
-                <a href="/services-coo.html">Fractional COO</a>
-                <a href="/services-web.html">Custom Apps</a>
+                <a href="services/bookkeeping-accounting.html">Bookkeeping</a>
+                <a href="services/tax-preparation.html">Tax Preparation</a>
+                <a href="services/fractional-cfo.html">Fractional CFO</a>
+                <a href="services/financial-systems.html">Financial Systems</a>
             </div>
             <div class="footer-links">
                 <h4>Company</h4>
-                <a href="/about.html">About</a>
-                <a href="/blog.html">Blog</a>
-                <a href="/training.html">Training</a>
-                <a href="/contact.html">Contact</a>
+                <a href="about.html">About</a>
+                <a href="blog.html">Blog</a>
+                <a href="lifeline.html">Lifeline</a>
+                <a href="contact.html">Contact</a>
             </div>
         </div>
         <div class="footer-bottom">
