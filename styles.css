@@ -46,6 +46,15 @@ strong {
     color: var(--charcoal);
 }
 
+.hero strong,
+.page-hero strong,
+.lifeline-teaser strong,
+.results strong,
+.training-teaser strong {
+    color: var(--warm-white);
+    font-weight: 700;
+}
+
 /* Navigation */
 nav {
     position: fixed;
@@ -588,12 +597,12 @@ nav {
 }
 
 .owl-quote::before {
-    content: '"';
+    content: '\201C';
     color: var(--teal);
-    font-size: 5rem;
-    line-height: 0;
-    vertical-align: -0.5em;
-    margin-right: 0.25rem;
+    font-size: 4rem;
+    line-height: 1;
+    vertical-align: -0.15em;
+    margin-right: 0.15rem;
 }
 
 .owl-link {
