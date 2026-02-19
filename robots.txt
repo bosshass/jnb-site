@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /jnb-premium-motion-padding/
+Disallow: /jnb-feb2026-update/
+
+Sitemap: https://jnbllc.com/sitemap.xml
