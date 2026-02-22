@@ -63,7 +63,7 @@ export default function ServicePageLayout({ title, tagline, intro, philosophy, s
       <section className="py-16 bg-white"><div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
         <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#1a1a2e] mb-4">Have questions? <span className="italic text-[#0D7377]">Let's talk.</span></h3>
         <p className="font-sans text-[#1a1a2e]/50 mb-8 max-w-lg mx-auto">No pitch deck. No weird sales funnel. Just an honest conversation about where you are and whether we can help.</p>
-        <a href="mailto:sara@jnbservice.com" className="inline-flex items-center gap-2 px-8 py-4 bg-[#0D7377] text-white font-sans font-semibold rounded-full hover:bg-[#0a5c5f] transition-all duration-300 hover:shadow-xl hover:shadow-[#0D7377]/20">Send Us a Note</a>
+        <a href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-[#0D7377] text-white font-sans font-semibold rounded-full hover:bg-[#0a5c5f] transition-all duration-300 hover:shadow-xl hover:shadow-[#0D7377]/20">Send Us a Note</a>
       </div></section>
       <Footer />
     </div>

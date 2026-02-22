@@ -35,7 +35,7 @@ export default function BlogPostLayout({ title, seoTitle, seoDescription, seoKey
       <section className="py-16 bg-white"><div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
         <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#1a1a2e] mb-4">{ctaTitle}</h3>
         <p className="font-sans text-[#1a1a2e]/50 mb-8 max-w-lg mx-auto">{ctaText}</p>
-        <a href="mailto:sara@jnbservice.com" className="inline-flex items-center gap-2 px-8 py-4 bg-[#0D7377] text-white font-sans font-semibold rounded-full hover:bg-[#0a5c5f] transition-all duration-300 hover:shadow-xl hover:shadow-[#0D7377]/20">Start a Conversation</a>
+        <a href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-[#0D7377] text-white font-sans font-semibold rounded-full hover:bg-[#0a5c5f] transition-all duration-300 hover:shadow-xl hover:shadow-[#0D7377]/20">Start a Conversation</a>
       </div></section>
       <Footer />
     </div>

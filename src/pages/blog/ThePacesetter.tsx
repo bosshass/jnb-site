@@ -146,6 +146,19 @@ export default function ThePacesetter() {
               Pete
             </h2>
 
+            <div className="my-8 flex justify-center">
+              <div className="relative">
+                <img
+                  src="/pete-tierney.jpg"
+                  alt="Pete Tierney"
+                  className="w-64 h-auto rounded-2xl shadow-lg border-2 border-[#c4a882]/20"
+                />
+                <p className="font-sans text-sm text-[#1a1a2e]/35 text-center mt-3 italic">
+                  Pete Tierney
+                </p>
+              </div>
+            </div>
+
             <p className="font-sans text-lg text-[#1a1a2e]/65 leading-[1.9] mb-8">
               In high school, my teacher Pete talked about pace differently.
             </p>
@@ -285,7 +298,8 @@ export default function ThePacesetter() {
             Let's build systems that hold the tempo — even when you step back.
           </p>
           <a
-            href="mailto:sara@jnbservice.com"
+            href="/contact"
+            onClick={(e) => { e.preventDefault(); window.location.href = "/contact"; }}
             className="inline-flex items-center gap-2 px-8 py-4 bg-[#0D7377] text-white font-sans font-semibold rounded-full hover:bg-[#0a5c5f] transition-all duration-300 hover:shadow-xl hover:shadow-[#0D7377]/20"
           >
             Start a Conversation

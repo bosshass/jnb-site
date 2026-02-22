@@ -1,7 +1,15 @@
 import { motion } from "framer-motion";
-import { ArrowRight, ChevronDown } from "lucide-react";
+import { ArrowRight, ChevronDown, Phone } from "lucide-react";
+import { useLocation } from "wouter";
 
 export default function HeroSection() {
+  const [, setLocation] = useLocation();
+  const handleContact = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setLocation("/contact");
+    window.scrollTo(0, 0);
+  };
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       <div className="absolute inset-0 watercolor-hero" />
@@ -17,14 +25,24 @@ export default function HeroSection() {
             className="text-lg sm:text-xl text-[#1a1a2e]/60 leading-relaxed max-w-xl mb-10 font-sans">
             Whether you need someone to clean up your books, take tax season off your plate, or help you actually understand your finances — we're here. No jargon, no judgment.
           </motion.p>
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.6 }} className="flex flex-wrap gap-4">
-            <a href="mailto:sara@jnbservice.com" className="group inline-flex items-center gap-2 px-8 py-4 bg-[#0D7377] text-white font-sans font-semibold rounded-full hover:bg-[#0a5c5f] transition-all duration-300 hover:shadow-xl hover:shadow-[#0D7377]/20 hover:-translate-y-0.5">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.6 }} className="flex flex-wrap items-center gap-4">
+            <a href="/contact" onClick={handleContact} className="group inline-flex items-center gap-2 px-8 py-4 bg-[#0D7377] text-white font-sans font-semibold rounded-full hover:bg-[#0a5c5f] transition-all duration-300 hover:shadow-xl hover:shadow-[#0D7377]/20 hover:-translate-y-0.5">
               Let's Chat <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
             </a>
             <a href="#services" className="group inline-flex items-center gap-2 px-8 py-4 bg-white/60 backdrop-blur-sm border border-[#0D7377]/20 text-[#0D7377] font-sans font-semibold rounded-full hover:bg-white/80 hover:border-[#0D7377]/40 transition-all duration-300">
               See What We Do <ChevronDown size={18} className="transition-transform group-hover:translate-y-0.5" />
             </a>
           </motion.div>
+          <motion.a
+            href="tel:7207500063"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.9 }}
+            className="inline-flex items-center gap-2 mt-8 font-sans text-[#1a1a2e]/50 hover:text-[#0D7377] transition-colors"
+          >
+            <Phone size={16} />
+            <span className="text-lg font-medium">(720) 750-0063</span>
+          </motion.a>
         </div>
       </div>
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#faf8f5] to-transparent" />

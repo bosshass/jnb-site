@@ -71,7 +71,7 @@ export default function Navbar() {
                 {link.label}<span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#0D7377] transition-all duration-300 group-hover:w-full rounded-full" />
               </a>
             ))}
-            <a href="mailto:sara@jnbservice.com" className="ml-2 px-6 py-2.5 bg-[#0D7377] text-white font-sans text-sm font-semibold rounded-full hover:bg-[#0a5c5f] transition-all duration-300 hover:shadow-lg hover:shadow-[#0D7377]/20">Let's Talk</a>
+            <a href="/contact" onClick={(e) => { e.preventDefault(); setLocation("/contact"); window.scrollTo(0, 0); }} className="ml-2 px-6 py-2.5 bg-[#0D7377] text-white font-sans text-sm font-semibold rounded-full hover:bg-[#0a5c5f] transition-all duration-300 hover:shadow-lg hover:shadow-[#0D7377]/20">Let's Talk</a>
           </div>
           <button onClick={() => setMobileOpen(!mobileOpen)} className="md:hidden p-2 text-[#1a1a2e]" aria-label="Toggle menu">{mobileOpen ? <X size={24} /> : <Menu size={24} />}</button>
         </div>
@@ -84,7 +84,7 @@ export default function Navbar() {
               {serviceLinks.map((s) => (<button key={s.href} onClick={() => handleServiceClick(s.href)} className="block w-full text-left font-sans text-sm text-[#1a1a2e]/60 hover:text-[#0D7377] py-2.5 border-b border-gray-50 transition-colors">{s.label}</button>))}
             </motion.div>)}</AnimatePresence>
             {navLinks.map((link) => (<a key={link.href} href={link.href} onClick={(e) => handleNavClick(link, e)} className="font-sans text-base font-medium text-[#1a1a2e]/80 hover:text-[#0D7377] transition-colors py-3 border-b border-gray-100">{link.label}</a>))}
-            <a href="mailto:sara@jnbservice.com" onClick={() => setMobileOpen(false)} className="mt-3 px-6 py-3 bg-[#0D7377] text-white font-sans text-sm font-semibold rounded-full text-center">Let's Talk</a>
+            <a href="/contact" onClick={(e) => { e.preventDefault(); setMobileOpen(false); setLocation("/contact"); window.scrollTo(0, 0); }} className="mt-3 px-6 py-3 bg-[#0D7377] text-white font-sans text-sm font-semibold rounded-full text-center">Let's Talk</a>
           </div>
         </motion.div>
       )}</AnimatePresence>

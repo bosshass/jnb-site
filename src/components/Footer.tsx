@@ -12,13 +12,13 @@ const companyLinks = [
   { label: "Case Studies", href: "/case-studies" },
   { label: "Blog", href: "/blog" },
   { label: "Lifeline", href: "/#lifeline" },
-  { label: "Contact", href: "mailto:sara@jnbservice.com" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Footer() {
   const [location, setLocation] = useLocation();
   const handleClick = (href: string, e: React.MouseEvent) => {
-    if (href.startsWith("mailto:")) return;
+    if (href.startsWith("mailto:") || href.startsWith("tel:")) return;
     e.preventDefault();
     if (href.startsWith("/#")) {
       const hash = href.substring(1);
@@ -40,7 +40,7 @@ export default function Footer() {
             </a>
             <p className="text-white/40 text-sm mb-6 leading-relaxed font-sans">We make the numbers make sense.</p>
             <div className="space-y-3">
-              <a href="tel:7207500063" className="flex items-center gap-3 text-white/50 hover:text-[#0D7377] transition-colors text-sm font-sans"><Phone size={16} />(720) 750-0063</a>
+              <a href="tel:7207500063" className="flex items-center gap-3 text-white hover:text-[#0D7377] transition-colors font-sans font-semibold text-lg"><Phone size={18} className="text-[#0D7377]" />(720) 750-0063</a>
               <a href="mailto:sara@jnbservice.com" className="flex items-center gap-3 text-white/50 hover:text-[#0D7377] transition-colors text-sm font-sans"><Mail size={16} />sara@jnbservice.com</a>
             </div>
           </div>
@@ -55,7 +55,7 @@ export default function Footer() {
           <div>
             <h4 className="font-serif font-semibold text-white text-sm uppercase tracking-wider mb-6">Get in Touch</h4>
             <p className="text-white/40 text-sm mb-6 leading-relaxed font-sans">Ready to get your numbers sorted? We'd love to hear from you.</p>
-            <a href="mailto:sara@jnbservice.com" className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#0D7377]/15 border border-[#0D7377]/30 text-[#0D7377] font-sans font-semibold text-sm rounded-full hover:bg-[#0D7377]/25 transition-all">Send Us a Note</a>
+            <a href="/contact" onClick={(e) => handleClick("/contact", e)} className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#0D7377]/15 border border-[#0D7377]/30 text-[#0D7377] font-sans font-semibold text-sm rounded-full hover:bg-[#0D7377]/25 transition-all">Send Us a Note</a>
           </div>
         </div>
         <div className="mt-16 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">

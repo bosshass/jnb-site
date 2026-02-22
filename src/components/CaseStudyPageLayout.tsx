@@ -31,7 +31,7 @@ export default function CaseStudyPageLayout({ industry, title, subtitle, seoDesc
         <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#1a1a2e] mb-4">See yourself in this story?</h3>
         <p className="font-sans text-[#1a1a2e]/50 mb-8 max-w-lg mx-auto">Every business is different, but the patterns are the same. Let's talk about yours.</p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="mailto:sara@jnbservice.com" className="inline-flex items-center gap-2 px-8 py-4 bg-[#0D7377] text-white font-sans font-semibold rounded-full hover:bg-[#0a5c5f] transition-all duration-300 hover:shadow-xl hover:shadow-[#0D7377]/20">Let's Chat</a>
+          <a href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-[#0D7377] text-white font-sans font-semibold rounded-full hover:bg-[#0a5c5f] transition-all duration-300 hover:shadow-xl hover:shadow-[#0D7377]/20">Let's Chat</a>
           <a href="/case-studies" onClick={back} className="inline-flex items-center gap-2 px-8 py-4 border border-[#0D7377]/20 text-[#0D7377] font-sans font-semibold rounded-full hover:bg-[#0D7377]/5 transition-all">More Case Studies</a>
         </div>
       </div></section>

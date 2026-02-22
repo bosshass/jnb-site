@@ -18,11 +18,13 @@ import ThePacesetter from "./pages/blog/ThePacesetter";
 import TheSpireLesson from "./pages/blog/TheSpireLesson";
 import IBuiltTheHouse from "./pages/blog/IBuiltTheHouse";
 import NotFound from "./pages/NotFound";
+import Contact from "./pages/Contact";
 
 export default function App() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/contact" component={Contact} />
       <Route path="/services/bookkeeping-accounting" component={BookkeepingAccounting} />
       <Route path="/services/tax-preparation" component={TaxPreparation} />
       <Route path="/services/fractional-cfo" component={FractionalCFO} />

@@ -144,7 +144,7 @@ export default function Blog() {
             No pitch deck. No weird sales funnel. Just an honest conversation about where you are and whether we can help.
           </p>
           <a
-            href="mailto:sara@jnbservice.com"
+            href="/contact"
             className="inline-flex items-center gap-2 px-8 py-4 bg-[#0D7377] text-white font-sans font-semibold rounded-full hover:bg-[#0a5c5f] transition-all duration-300 hover:shadow-xl hover:shadow-[#0D7377]/20"
           >
             Start a Conversation

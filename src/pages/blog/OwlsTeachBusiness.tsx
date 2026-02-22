@@ -142,7 +142,7 @@ export default function OwlsTeachBusiness() {
             Let's talk about how financial clarity can change the way you run your business.
           </p>
           <a
-            href="mailto:sara@jnbservice.com"
+            href="/contact"
             className="inline-flex items-center gap-2 px-8 py-4 bg-[#0D7377] text-white font-sans font-semibold rounded-full hover:bg-[#0a5c5f] transition-all duration-300 hover:shadow-xl hover:shadow-[#0D7377]/20"
           >
             Start a Conversation
