@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
-  <circle cx="60" cy="60" r="58" fill="#faf8f5" stroke="#0D7377" stroke-width="2"/>
-  <text x="60" y="52" text-anchor="middle" font-family="Georgia, serif" font-weight="700" font-size="36" fill="#1a1a2e">JNB</text>
-  <text x="60" y="78" text-anchor="middle" font-family="Georgia, serif" font-weight="400" font-size="16" fill="#0D7377">LLC</text>
-  <circle cx="95" cy="25" r="8" fill="#e8b4b8" opacity="0.6"/>
-  <circle cx="85" cy="18" r="5" fill="#e8b4b8" opacity="0.4"/>
-</svg>
