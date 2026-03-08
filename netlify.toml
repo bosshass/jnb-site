@@ -2,11 +2,20 @@
   publish = "."
   command = "echo done"
 
-# ──────────────────────────────────────────────
-# Domain redirect: jnbservice.com → jnbllc.com
-# (requires jnbservice.com added as domain alias in Netlify dashboard)
-# ──────────────────────────────────────────────
+# Serve static files directly (before SPA fallback)
+[[redirects]]
+  from = "/sitemap.xml"
+  to = "/sitemap.xml"
+  status = 200
+  force = true
 
+[[redirects]]
+  from = "/robots.txt"
+  to = "/robots.txt"
+  status = 200
+  force = true
+
+# Domain redirect: jnbservice.com → jnbllc.com
 [[redirects]]
   from = "https://jnbservice.com/*"
   to = "https://jnbllc.com/:splat"
@@ -19,27 +28,14 @@
   status = 301
   force = true
 
-[[redirects]]
-  from = "https://www.jnbllc.com/*"
-  to = "https://jnbllc.com/:splat"
-  status = 301
-  force = true
-
-# ──────────────────────────────────────────────
-# Strip .html extensions (301 permanent redirect)
-# e.g. /about.html → /about
-# ──────────────────────────────────────────────
-
+# Strip .html extensions
 [[redirects]]
   from = "/*.html"
   to = "/:splat"
   status = 301
   force = true
 
-# ──────────────────────────────────────────────
-# SPA fallback — serve index.html for all routes
-# ──────────────────────────────────────────────
-
+# SPA fallback — LAST
 [[redirects]]
   from = "/*"
   to = "/index.html"
