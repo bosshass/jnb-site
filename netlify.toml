@@ -1,3 +1,46 @@
 [build]
   publish = "."
   command = "echo done"
+
+# ──────────────────────────────────────────────
+# Domain redirect: jnbservice.com → jnbllc.com
+# (requires jnbservice.com added as domain alias in Netlify dashboard)
+# ──────────────────────────────────────────────
+
+[[redirects]]
+  from = "https://jnbservice.com/*"
+  to = "https://jnbllc.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.jnbservice.com/*"
+  to = "https://jnbllc.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.jnbllc.com/*"
+  to = "https://jnbllc.com/:splat"
+  status = 301
+  force = true
+
+# ──────────────────────────────────────────────
+# Strip .html extensions (301 permanent redirect)
+# e.g. /about.html → /about
+# ──────────────────────────────────────────────
+
+[[redirects]]
+  from = "/*.html"
+  to = "/:splat"
+  status = 301
+  force = true
+
+# ──────────────────────────────────────────────
+# SPA fallback — serve index.html for all routes
+# ──────────────────────────────────────────────
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
