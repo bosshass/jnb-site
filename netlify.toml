@@ -27,12 +27,31 @@
 
 # ──────────────────────────────────────────────
 # Strip .html extensions (301 permanent redirect)
-# e.g. /about.html → /about
+# Netlify splats only work at the end of paths,
+# so we list each page explicitly.
 # ──────────────────────────────────────────────
 
 [[redirects]]
-  from = "/*.html"
-  to = "/:splat"
+  from = "/about.html"
+  to = "/about"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services.html"
+  to = "/services"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contact.html"
+  to = "/contact"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog.html"
+  to = "/blog"
   status = 301
   force = true
 
