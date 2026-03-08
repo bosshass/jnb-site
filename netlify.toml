@@ -2,7 +2,6 @@
   publish = "."
   command = "echo done"
 
-# Serve static files directly (before SPA fallback)
 [[redirects]]
   from = "/sitemap.xml"
   to = "/sitemap.xml"
@@ -15,7 +14,6 @@
   status = 200
   force = true
 
-# Domain redirect: jnbservice.com → jnbllc.com
 [[redirects]]
   from = "https://jnbservice.com/*"
   to = "https://jnbllc.com/:splat"
@@ -28,14 +26,12 @@
   status = 301
   force = true
 
-# Strip .html extensions
 [[redirects]]
   from = "/*.html"
   to = "/:splat"
   status = 301
   force = true
 
-# SPA fallback — LAST
 [[redirects]]
   from = "/*"
   to = "/index.html"
