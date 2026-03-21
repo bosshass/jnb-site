@@ -1,0 +1,49 @@
+[build]
+  publish = "."
+  command = "echo done"
+
+# Force www (canonical consistency)
+[[redirects]]
+  from = "https://jnbllc.com/*"
+  to = "https://www.jnbllc.com/:splat"
+  status = 301
+  force = true
+
+# Old domain redirects
+[[redirects]]
+  from = "https://jnbservice.com/*"
+  to = "https://www.jnbllc.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.jnbservice.com/*"
+  to = "https://www.jnbllc.com/:splat"
+  status = 301
+  force = true
+
+# Static file passthrough
+[[redirects]]
+  from = "/sitemap.xml"
+  to = "/sitemap.xml"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/robots.txt"
+  to = "/robots.txt"
+  status = 200
+  force = true
+
+# Old .html routes
+[[redirects]]
+  from = "/*.html"
+  to = "/:splat"
+  status = 301
+  force = true
+
+# SPA catch-all (for any route without its own index.html)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
