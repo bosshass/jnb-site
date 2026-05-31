@@ -16,7 +16,18 @@
   <url><loc>https://www.jnbllc.com/case-studies/business-consulting</loc><lastmod>2026-03-21</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.jnbllc.com/blog</loc><lastmod>2026-03-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.jnbllc.com/blog/owls-teach-business</loc><lastmod>2026-03-21</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.jnbllc.com/blog/the-pacesetter</loc><lastmod>2026-03-21</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><url>
+    <loc>https://www.jnbllc.com/blog/time-tracking-profit-leak</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jnbllc.com/blog/time-tracking-why-it-matters</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jnbllc.com/blog/the-pacesetter</loc><lastmod>2026-03-21</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.jnbllc.com/blog/the-spire-lesson</loc><lastmod>2026-03-21</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
   <url><loc>https://www.jnbllc.com/blog/i-built-the-house</loc><lastmod>2026-03-21</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
   <url><loc>https://www.jnbllc.com/blog/legend-of-1000-cranes</loc><lastmod>2026-03-21</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
