@@ -75,6 +75,50 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
     <script type="module" crossorigin src="/assets/index-BLovnRY1.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-CoLjpDzo.css">
+    <style>
+      .jnb-web-service-link{display:block;text-decoration:none!important;color:#1a1a2e!important;background:#faf8f5;border:1px solid #e9e5df;border-radius:14px;padding:25px;transition:border-color .2s,transform .2s}
+      .jnb-web-service-link:hover{border-color:#0D7377;transform:translateY(-2px)}
+      .jnb-web-service-link strong{display:block;font-family:'Playfair Display',Georgia,serif;font-size:22px;margin-bottom:9px}
+      .jnb-web-service-link span{display:block;color:#665f57;line-height:1.6}
+      .jnb-web-footer-link{display:inline-block!important;color:inherit!important;text-decoration:none!important}
+      .jnb-web-footer-link:hover{color:#0D7377!important;text-decoration:underline!important}
+    </style>
+    <script>
+      document.addEventListener('DOMContentLoaded',function(){
+        var ticks=0;
+        var watcher=new MutationObserver(sync);
+        function sync(){
+          var service=document.querySelector('#services');
+          if(service&&!document.getElementById('jnb-website-services-card')){
+            var cards=Array.from(service.querySelectorAll('a[href*="/services/"]')).filter(function(a){return a.getAttribute('href')!='/services/website-design/'});
+            var target=cards.length?cards[0].parentElement:null;
+            if(target){
+              var link=document.createElement('a');
+              link.id='jnb-website-services-card';
+              link.className='jnb-web-service-link';
+              link.href='/services/website-design/';
+              link.innerHTML='<strong>Website Design &amp; Development</strong><span>Custom websites built to turn visitors into leads. Design, development, mobile experience, SEO foundations &amp; analytics. Projects $2,500–$5,000. &rarr;</span>';
+              if(target.parentElement)target.parentElement.appendChild(link);
+            }
+          }
+          var foot=document.querySelector('footer');
+          if(foot&&!document.getElementById('jnb-website-footer-link')){
+            var serviceLinks=Array.from(foot.querySelectorAll('a[href*="/services/"]'));
+            var link=document.createElement('a');link.id='jnb-website-footer-link';link.className='jnb-web-footer-link';link.href='/services/website-design/';link.textContent='Website Design & Development';
+            if(serviceLinks.length){
+              var last=serviceLinks[serviceLinks.length-1];
+              if(last.parentElement && last.parentElement.tagName==='LI'){var li=document.createElement('li');li.appendChild(link);last.parentElement.parentElement.appendChild(li)}
+              else{last.parentElement.appendChild(link)}
+            }else{var list=foot.querySelector('ul');if(list){var li=document.createElement('li');li.appendChild(link);list.appendChild(li)}else{foot.appendChild(link)}}
+          }
+          ticks++;
+          if(document.getElementById('jnb-website-services-card')&&document.getElementById('jnb-website-footer-link'))watcher.disconnect();
+          if(ticks>500)watcher.disconnect();
+        }
+        watcher.observe(document.body,{childList:true,subtree:true});
+        sync();
+      });
+    </script>
   </head>
   <body>
     <!-- Hidden form for Netlify Forms detection (SPA) -->
