@@ -91,7 +91,7 @@
           var service=document.querySelector('#services');
           if(service&&!document.getElementById('jnb-website-services-card')){
             var cards=Array.from(service.querySelectorAll('a[href*="/services/"]')).filter(function(a){return a.getAttribute('href')!='/services/website-design/'});
-            var target=cards.length?cards[0].parentElement:null;
+            var first=cards.length?cards[0]:null;var card=first?(first.closest('article, .service-card, .service-tile, .card')||first.parentElement):null;var target=card?card.parentElement:null;
             if(target){
               var link=document.createElement('a');
               link.id='jnb-website-services-card';
