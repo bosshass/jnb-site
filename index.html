@@ -88,50 +88,70 @@
     </style>
     <script>
       (function(){
-        function getSection(){
-          var headings=Array.from(document.querySelectorAll('#root h1,#root h2,#root h3,#root h4'));
-          var h=headings.find(function(el){return /^our services$|^services$|^what we do$|^how we help$/i.test((el.textContent||'').trim())});
-          return h?(h.closest('section')||h.parentElement.parentElement):document.querySelector('#services');
-        }
-        function newCard(){
-          var a=document.createElement('a');
-          a.id='jnb-website-services-card';
-          a.className='jnb-web-service-link';
-          a.href='/services/website-design/';
-          a.innerHTML='<strong>Website Design &amp; Development</strong><span>Custom, mobile-friendly small-business websites designed to generate leads. Design, development, SEO foundations and analytics. Projects $2,500–$5,000. &rarr;</span>';
-          return a;
-        }
         function apply(){
-          var section=getSection(),card=document.getElementById('jnb-website-services-card');
-          if(section&&!card){
-            var candidates=Array.from(section.querySelectorAll('a,article,div')).filter(function(e){return e.children.length>0&&/bookkeeping|quickbooks|marketing/i.test(e.textContent||'')});
-            var matched=candidates.sort(function(a,b){return a.textContent.length-b.textContent.length})[0];
-            var list=matched&&matched.closest('.grid,.services-grid,[class*="grid"],[class*="Grid"]');
-            if(!list){
-              var grids=Array.from(section.querySelectorAll('[class*="grid"],[class*="Grid"]'));
-              list=grids.find(function(e){return e.children.length>=2})||null;
+          var root=document.getElementById('root');
+          if(!root)return;
+          var footer=root.querySelector('footer');
+          if(!footer)return;
+          // Remove the previously injected card if it ended up inside the footer.
+          var card=document.getElementById('jnb-website-services-card');
+          if(card&&footer.contains(card))card.remove();
+          // Keep the website service as an ordinary link within the Services column.
+          if(!footer.querySelector('#jnb-website-footer-link')){
+            var links=Array.from(footer.querySelectorAll('a'));
+            var preceding=links.find(function(a){return /^financial systems$/i.test((a.textContent||'').trim())})
+              ||links.find(function(a){return /^fractional cfo$|^bookkeeping$/i.test((a.textContent||'').trim())});
+            if(preceding){
+              var link=document.createElement('a');
+              link.id='jnb-website-footer-link';
+              link.href='/services/website-design/';
+              link.textContent='Website Design & Development';
+              link.className=preceding.className;
+              var parent=preceding.parentElement;
+              if(parent&&parent.tagName==='LI'){
+                var item=parent.cloneNode(false);
+                item.appendChild(link);
+                parent.after(item);
+              }else{
+                // Matching sibling link inherits the existing footer's layout and typography.
+                preceding.after(link);
+              }
             }
-            (list||section).appendChild(newCard());
           }
-          var footer=document.querySelector('#root footer,footer');
-          if(footer&&!document.getElementById('jnb-website-footer-link')){
-            var link=document.createElement('a');
-            link.id='jnb-website-footer-link';link.className='jnb-web-footer-link';
-            link.href='/services/website-design/';link.textContent='Website Design & Development';
-            var anchors=Array.from(footer.querySelectorAll('a'));
-            var serviceAnchor=anchors.find(function(a){return /marketing|bookkeeping|quickbooks/i.test(a.textContent||'')});
-            if(serviceAnchor&&serviceAnchor.closest('li')){
-              var li=document.createElement('li');li.appendChild(link);serviceAnchor.closest('li').parentElement.appendChild(li);
-            }else{
-              var group=serviceAnchor?serviceAnchor.parentElement:footer;
-              var holder=document.createElement('div');holder.style.padding='12px 0';holder.appendChild(link);group.appendChild(holder);
+          // Only add a service card within a real Services section, never the footer.
+          if(!document.getElementById('jnb-website-services-card')){
+            var headings=Array.from(root.querySelectorAll('main h1,main h2,main h3,section h2,section h3'));
+            var heading=headings.find(function(el){return /^(our services|services|what we do|how we help)$/i.test((el.textContent||'').trim())});
+            var section=heading&&heading.closest('section');
+            if(section&&!section.contains(footer)&&!footer.contains(section)){
+              var cards=Array.from(section.querySelectorAll('a[href]')).filter(function(a){
+                return /bookkeeping|quickbooks|financial systems|fractional cfo/i.test(a.textContent||'');
+              });
+              var peer=cards.find(function(a){return a.parentElement&&a.parentElement.children.length>1});
+              if(peer){
+                var item=peer.cloneNode(false);
+                item.id='jnb-website-services-card';
+                item.href='/services/website-design/';
+                item.textContent='Website Design & Development';
+                item.className=peer.className;
+                peer.parentElement.appendChild(item);
+              }
             }
           }
+          // Product branding in the footer.
+          Array.from(footer.querySelectorAll('a')).forEach(function(a){
+            if((a.textContent||'').trim()==='Lifeline')a.textContent='Javelin';
+          });
         }
         document.addEventListener('DOMContentLoaded',function(){
           var root=document.getElementById('root');
           if(!root)return;
-          var observer=new MutationObserver(function(){observer.disconnect();apply();observer.observe(root,{childList:true,subtree:true})});
+          var scheduled=false;
+          var observer=new MutationObserver(function(){
+            if(scheduled)return;
+            scheduled=true;
+            requestAnimationFrame(function(){scheduled=false;apply()});
+          });
           observer.observe(root,{childList:true,subtree:true});
           apply();
           window.addEventListener('load',apply);
