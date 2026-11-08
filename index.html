@@ -3,21 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>Small Business Bookkeeping & Growth Advisory | Littleton & Denver | JNB LLC</title>
-    <meta name="description" content="Small business bookkeeping, QuickBooks cleanup, fractional CFO, website design and development, and growth advisory from JNB LLC in Littleton, Colorado. Serving Denver and businesses nationwide." />
-    <meta name="keywords" content="small business bookkeeping Littleton, Denver bookkeeping, QuickBooks cleanup, fractional CFO, growth advisory, small business website design, website development Denver, business websites Colorado" />
+    <title>Monthly Bookkeeping for Service Businesses | Denver & Littleton | JNB LLC</title>
+    <meta name="description" content="Monthly QuickBooks bookkeeping, financial reporting and job-costing insight for contractors and service businesses in Littleton, Denver and across Colorado. JNB LLC also serves clients nationwide." />
+    <meta name="keywords" content="monthly bookkeeping Denver, monthly bookkeeper Littleton, QuickBooks Online bookkeeping Colorado, contractor bookkeeping, HVAC bookkeeping, electrical contractor bookkeeping, service business job costing, QuickBooks cleanup" />
     <meta name="author" content="JNB LLC | Sara Hass" />
     <meta name="robots" content="index, follow" />
-    <meta property="og:title" content="Small Business Bookkeeping & Growth Advisory | JNB LLC" />
-    <meta property="og:description" content="Clean books are the starting point. JNB turns your QuickBooks data into better pricing, hiring, cash-flow, margin, and growth decisions." />
+    <meta property="og:title" content="Monthly Bookkeeping & Financial Insight for Service Businesses | JNB LLC" />
+    <meta property="og:description" content="Ongoing bookkeeping and financial reporting for Colorado contractors and service businesses. Understand where your money goes and what you actually keep." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.jnbllc.com/" />
     <meta property="og:image" content="/logo.png" />
     <meta property="og:site_name" content="JNB LLC" />
     <meta property="og:locale" content="en_US" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Small Business Bookkeeping & Growth Advisory | JNB LLC" />
-    <meta name="twitter:description" content="Bookkeeping plus financial insight for business owners who want to grow, scale, and understand why revenue is not turning into profit." />
+    <meta name="twitter:title" content="Monthly Bookkeeping for Service Businesses | JNB LLC" />
+    <meta name="twitter:description" content="Monthly QuickBooks bookkeeping, job-costing support and profitability insight for owners who want dependable numbers and clearer decisions." />
     <link rel="canonical" href="https://www.jnbllc.com/" />
     <link rel="icon" type="image/png" href="/logo.png" />
     <link rel="apple-touch-icon" href="/logo.png" />
@@ -26,7 +26,7 @@
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "JNB LLC",
-  "description": "Bookkeeping, QuickBooks cleanup, financial reporting, fractional CFO, growth advisory, website design and website development for small businesses.",
+  "description": "Monthly QuickBooks bookkeeping, reconciliations, financial reporting, job-costing support, fractional CFO advisory, and business growth services for small businesses.",
   "url": "https://www.jnbllc.com",
   "telephone": "+1-720-750-0063",
   "email": "admin@jnbllc.com",
@@ -59,7 +59,9 @@
     }
   ],
   "serviceType": [
+    "Monthly Bookkeeping",
     "Small Business Bookkeeping",
+    "Bookkeeping for Contractors and Service Businesses",
     "QuickBooks Cleanup",
     "Financial Reporting",
     "Profitability Analysis",
@@ -85,6 +87,16 @@
       .jnb-web-footer-link:hover{color:#0D7377!important;text-decoration:underline!important}
       .jnb-web-service-fallback{padding:45px 24px;background:#faf8f5}
       .jnb-web-service-fallback .jnb-web-service-link{max-width:1100px;margin:auto;background:#fff}
+
+      /* A focused recurring-bookkeeping offer without changing the site's existing app. */
+      .jnb-monthly-spotlight{background:#faf8f5;border-top:1px solid #e9e5df;border-bottom:1px solid #e9e5df;padding:39px 24px}
+      .jnb-monthly-spotlight-inner{max-width:1120px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap}
+      .jnb-monthly-spotlight-copy{max-width:730px}
+      .jnb-monthly-spotlight-eyebrow{font-family:"Source Sans 3",Arial,sans-serif;font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#0D7377;margin:0 0 8px}
+      .jnb-monthly-spotlight h2{font-family:"Playfair Display",Georgia,serif;font-size:clamp(24px,3.1vw,37px);line-height:1.22;color:#1a1a2e;margin:0 0 9px}
+      .jnb-monthly-spotlight-desc{font-family:"Source Sans 3",Arial,sans-serif;font-size:17px;line-height:1.6;color:#4c4b4e;margin:0}
+      .jnb-monthly-spotlight-button{display:inline-flex;align-items:center;justify-content:center;white-space:normal;background:#0D7377;color:white!important;padding:14px 22px;border-radius:7px;font-weight:700;text-decoration:none!important;min-height:48px}
+      .jnb-monthly-spotlight-button:hover{background:#075d61}
     </style>
     <script>
       (function(){
@@ -95,6 +107,20 @@
         function apply(){
           var root=document.getElementById('root'),footer=root&&root.querySelector('footer');
           if(!root)return;
+
+          // Place the recurring-bookkeeping offer directly after the home hero.
+          if((location.pathname==='/'||location.pathname==='/index.html')&&!root.querySelector('#jnb-monthly-spotlight')){
+            var main=root.querySelector('main');
+            var hero=main&&main.querySelector('section');
+            if(hero){
+              var promo=document.createElement('section');
+              promo.id='jnb-monthly-spotlight';
+              promo.className='jnb-monthly-spotlight';
+              promo.setAttribute('aria-labelledby','jnb-monthly-spotlight-title');
+              promo.innerHTML='<div class="jnb-monthly-spotlight-inner"><div class="jnb-monthly-spotlight-copy"><p class="jnb-monthly-spotlight-eyebrow">Monthly bookkeeping for service businesses</p><h2 id="jnb-monthly-spotlight-title">Busy isn\'t the same as profitable.</h2><p class="jnb-monthly-spotlight-desc">JNB keeps your QuickBooks current and helps you understand job margins, costs, and cash flow. Based in Littleton, serving Denver-area businesses and clients nationwide.</p></div><a class="jnb-monthly-spotlight-button" href="/services/monthly-bookkeeping/">Explore Monthly Bookkeeping →</a></div>';
+              hero.insertAdjacentElement('afterend',promo);
+            }
+          }
           if(footer){
             var misplaced=footer.querySelector('#jnb-website-services-card');
             if(misplaced)misplaced.remove();
