@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Monthly Bookkeeping for Service Businesses | Denver & Littleton | JNB LLC</title>
-  <meta name="description" content="Monthly QuickBooks bookkeeping, reconciliations, financial reporting and job-costing insight for Colorado contractors and service businesses. JNB serves Denver, Littleton and clients nationwide." />
+  <title>Monthly Bookkeeping for Contractors | Littleton &amp; Denver | JNB</title>
+  <meta name="description" content="Monthly QuickBooks bookkeeping, reconciliation, reporting and job-cost analysis for contractors, HVAC, electrical and service businesses in Littleton, Denver and nationwide." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.jnbllc.com/services/monthly-bookkeeping/" />
   <meta property="og:type" content="website" />
@@ -102,17 +102,17 @@
   <section class="hero">
     <div class="wrap">
       <p class="eyebrow">Ongoing bookkeeping · Service businesses · Colorado &amp; nationwide</p>
-      <h1>Monthly bookkeeping that shows you what you actually keep.</h1>
+      <h1>Monthly bookkeeping for contractors who need to know their margins.</h1>
       <p class="lead">You can have a full schedule, customers paying invoices, and still wonder where the money went. JNB keeps your QuickBooks current and helps you understand the costs, margins, and cash flow behind the numbers.</p>
-      <div class="actions"><a class="btn" href="/contact">Talk About Monthly Bookkeeping</a><a class="btn alt" href="/case-studies">See Our Client Work</a></div>
+      <div class="actions"><a class="btn" href="/contact">Request a Bookkeeping Consultation</a><a class="btn alt" href="/case-studies">See Our Client Work</a></div><p class="note" style="margin-top:12px">Prefer to talk? <a href="tel:+17207500063">Call 720-750-0063</a>.</p>
       <p class="note">Based in Littleton, Colorado. Serving Denver-area and nationwide service businesses.</p>
     </div>
   </section>
   <section class="section">
     <div class="wrap">
       <p class="kicker">More than categorizing transactions</p>
-      <h2>Know where the money goes—and what to do next.</h2>
-      <p class="intro">JNB works with owners who want dependable bookkeeping and someone who can explain what their reports mean. Monthly services are tailored to the complexity of your business, not a one-size-fits-all package.</p>
+      <h2>Bookkeeping, job costing and financial answers for service businesses.</h2>
+      <p class="intro">JNB works with owners of established HVAC, electrical, security, construction and other service businesses who want dependable bookkeeping and someone to explain the numbers. Monthly support is tailored to transaction volume, reporting needs and operational complexity—not a one-size-fits-all package.</p>
       <div class="grid">
         <article class="card"><h3>Books that stay current</h3><p>Monthly transaction review, accurate account classifications, and bank and credit card reconciliations so your financials start with reliable data.</p></article>
         <article class="card"><h3>Reports you can use</h3><p>Profit-and-loss and balance-sheet review, plus clear explanations of performance, unusual expenses, and the questions owners should be asking.</p></article>
@@ -164,11 +164,23 @@
     </div>
   </section>
   <section class="closing">
-    <div class="wrap"><h2>Let's make your numbers work for you.</h2><p>JNB is welcoming a limited number of new ongoing monthly clients. Tell us what your books look like today and what you'd like to understand better.</p><a href="/contact" class="btn">Request a Monthly Bookkeeping Conversation</a></div>
+    <div class="wrap"><h2>Let's make your numbers work for you.</h2><p>JNB is welcoming a limited number of new ongoing monthly clients. Tell us what your books look like today and what you'd like to understand better.</p><a href="/contact" class="btn">Ask About Monthly Bookkeeping</a></div>
   </section>
 </main>
 <footer>
  <div class="wrap foot"><span>© JNB LLC · Littleton, Colorado · Serving clients nationwide</span><span><a href="/services/bookkeeping-accounting">Bookkeeping</a> · <a href="/case-studies">Case Studies</a> · <a href="/contact">Contact</a></span></div>
 </footer>
+<script>
+/* Contact intent tracking. These events count clicks, not confirmed leads. */
+(function(){
+  document.addEventListener('click',function(event){
+    var a=event.target&&event.target.closest?event.target.closest('a[href]'):null;
+    if(!a||typeof window.gtag!=='function')return;
+    var href=a.getAttribute('href')||'';
+    var kind=href.indexOf('tel:')===0?'phone':href.indexOf('mailto:')===0?'email':/^\/contact(?:\/|\?|#|$)/.test(href)?'contact_page':null;
+    if(kind)window.gtag('event','contact_click',{contact_method:kind,page_path:window.location.pathname});
+  });
+})();
+</script>
 </body>
 </html>
