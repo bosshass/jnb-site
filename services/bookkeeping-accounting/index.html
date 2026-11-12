@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>Small Business Bookkeeping in Littleton & Denver | JNB LLC</title>
-    <meta name="description" content="Small business bookkeeping in Littleton and Denver with more than monthly reports. JNB cleans up QuickBooks, keeps the books current, and turns the numbers into pricing, margin, cash-flow, hiring, and growth decisions." />
+    <title>Bookkeeper in Littleton, CO | Small Business Bookkeeping | JNB</title>
+    <meta name="description" content="Littleton bookkeeper supporting Denver-area businesses with QuickBooks reconciliations, monthly financial reports, cleanup and job-cost insight. Talk to JNB LLC." />
     <meta name="keywords" content="small business bookkeeping Littleton, bookkeeper Littleton CO, bookkeeping Denver, QuickBooks bookkeeping, QuickBooks cleanup, catch-up bookkeeping, monthly bookkeeping, profitability analysis, financial reporting" />
     <meta name="author" content="JNB LLC | Sara Hass" />
     <meta name="robots" content="index, follow" />
@@ -12,7 +12,7 @@
     <meta property="og:description" content="Bookkeeping that tells you what to do next. Clean QuickBooks data, monthly reporting, and practical financial insight for growing small businesses." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.jnbllc.com/services/bookkeeping-accounting" />
-    <meta property="og:image" content="/logo.png" />
+    <meta property="og:image" content="https://www.jnbllc.com/logo.png" />
     <meta property="og:site_name" content="JNB LLC" />
     <meta property="og:locale" content="en_US" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -92,5 +92,17 @@
       <textarea name="message"></textarea>
     </form>
     <div id="root"></div>
-  </body>
+  <script>
+/* Contact intent tracking. These events count clicks, not confirmed leads. */
+(function(){
+  document.addEventListener('click',function(event){
+    var a=event.target&&event.target.closest?event.target.closest('a[href]'):null;
+    if(!a||typeof window.gtag!=='function')return;
+    var href=a.getAttribute('href')||'';
+    var kind=href.indexOf('tel:')===0?'phone':href.indexOf('mailto:')===0?'email':/^\/contact(?:\/|\?|#|$)/.test(href)?'contact_page':null;
+    if(kind)window.gtag('event','contact_click',{contact_method:kind,page_path:window.location.pathname});
+  });
+})();
+</script>
+</body>
 </html>
