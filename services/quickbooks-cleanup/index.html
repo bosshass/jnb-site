@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>QuickBooks Cleanup & Catch-Up Bookkeeping | Littleton & Denver | JNB LLC</title>
-<meta name="description" content="QuickBooks cleanup and catch-up bookkeeping for small businesses in Littleton, Denver, and nationwide. Fix unreconciled accounts, old transactions, messy categories, and unreliable reports so you can trust the numbers and make better decisions." />
+<title>QuickBooks Cleanup &amp; Catch-Up | Littleton &amp; Denver | JNB</title>
+<meta name="description" content="Behind on QuickBooks? JNB provides bookkeeping cleanup, catch-up reconciliations and clearer reports for Littleton, Denver and nationwide service businesses." />
 <meta name="robots" content="index, follow" />
 <meta property="og:title" content="QuickBooks Cleanup & Catch-Up Bookkeeping | JNB LLC" />
 <meta property="og:description" content="If your QuickBooks is behind, messy, or impossible to trust, JNB gets the books cleaned up and turns the data into something you can actually use." />
@@ -75,7 +75,7 @@
 <body>
 <header><div class="wrap nav"><a class="brand" href="/"><img src="/logo.png" alt="JNB LLC" /> JNB LLC</a><nav class="navlinks"><a href="/services/bookkeeping-accounting">Bookkeeping</a><a href="/services/fractional-cfo">Fractional CFO</a><a class="btn" href="/contact">Talk to JNB</a></nav></div></header>
 <main>
-<section class="hero"><div class="wrap"><div class="eyebrow">QuickBooks cleanup + catch-up bookkeeping</div><h1>Your books are messy. That doesn't mean your business has to stay that way.</h1><p>If QuickBooks is behind, unreconciled, full of mystery transactions, or producing reports you don't trust, JNB gets the data cleaned up first. Then we use it to show you what is actually happening in the business.</p><p><a class="btn" href="/contact">Tell me what's going on</a></p></div></section>
+<section class="hero"><div class="wrap"><div class="eyebrow">QuickBooks cleanup + catch-up bookkeeping</div><h1>QuickBooks cleanup for business owners who need reliable numbers.</h1><p>Months behind, unreconciled accounts or reports that make no sense? JNB helps Littleton, Denver and nationwide service businesses catch up their QuickBooks and understand what the numbers are saying.</p><p><a class="btn" href="/contact">Request a QuickBooks Cleanup Review</a></p></div></section>
 <section class="section"><div class="wrap"><h2>Cleanup is not the finish line.</h2><div class="callout">The goal is not a prettier QuickBooks file. The goal is reliable financial data you can use to decide what to charge, when to hire, what is eating your margin, and whether growth is actually making you money.</div></div></section>
 <section class="section alt"><div class="wrap"><h2>What JNB can clean up</h2><div class="grid">
 <div class="card"><h3>Books that fell behind</h3><p>Catch up months or years of transactions, reconcile bank and credit-card accounts, and establish a reliable current starting point.</p></div>
@@ -90,4 +90,16 @@
 <section class="section alt"><div class="wrap"><h2>Keep your books current after cleanup</h2><p>Cleanup gets QuickBooks back to a reliable starting point. Ongoing <a href="/services/monthly-bookkeeping/">monthly bookkeeping for Littleton and Denver businesses</a> helps keep reconciliations, reporting, and business decisions on track. If your numbers are accurate but the profit still is not there, explore <a href="/services/growth-advisory">profitability and growth advisory</a>.</p></div></section>
 <section class="cta"><h2>Let's get the numbers trustworthy first.</h2><p>Then we can figure out what they are telling you about your business.</p><a class="btn" href="/contact">Start with a conversation</a></section>
 </main>
+<script>
+/* Contact intent tracking. These events count clicks, not confirmed leads. */
+(function(){
+  document.addEventListener('click',function(event){
+    var a=event.target&&event.target.closest?event.target.closest('a[href]'):null;
+    if(!a||typeof window.gtag!=='function')return;
+    var href=a.getAttribute('href')||'';
+    var kind=href.indexOf('tel:')===0?'phone':href.indexOf('mailto:')===0?'email':/^\/contact(?:\/|\?|#|$)/.test(href)?'contact_page':null;
+    if(kind)window.gtag('event','contact_click',{contact_method:kind,page_path:window.location.pathname});
+  });
+})();
+</script>
 </body></html>
