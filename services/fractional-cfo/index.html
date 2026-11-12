@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>Fractional CFO & Profitability Advisory | Denver & Littleton | JNB LLC</title>
-    <meta name="description" content="Fractional CFO and profitability advisory for growing small businesses. JNB uses your bookkeeping and QuickBooks data to explain why profit is missing and guide pricing, margins, hiring, cash flow, and growth." />
+    <title>Fractional CFO &amp; Controller Services in Denver | JNB LLC</title>
+    <meta name="description" content="Fractional CFO and controller support for Denver-area service businesses. JNB turns bookkeeping into job-margin analysis, cash-flow planning and owner decisions." />
     <meta name="keywords" content="fractional CFO Denver, fractional CFO Littleton, small business CFO, profitability consultant, cash flow forecasting, margin analysis, pricing strategy, hiring analysis, KPI reporting, business growth advisor" />
     <meta name="author" content="JNB LLC | Sara Hass" />
     <meta name="robots" content="index, follow" />
@@ -12,7 +12,7 @@
     <meta property="og:description" content="For businesses with revenue that still wonder where the money went. Turn your financial data into better pricing, hiring, margin, cash-flow, and growth decisions." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.jnbllc.com/services/fractional-cfo" />
-    <meta property="og:image" content="/logo.png" />
+    <meta property="og:image" content="https://www.jnbllc.com/logo.png" />
     <meta property="og:site_name" content="JNB LLC" />
     <meta property="og:locale" content="en_US" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -93,5 +93,17 @@
       <textarea name="message"></textarea>
     </form>
     <div id="root"></div>
-  </body>
+  <script>
+/* Contact intent tracking. These events count clicks, not confirmed leads. */
+(function(){
+  document.addEventListener('click',function(event){
+    var a=event.target&&event.target.closest?event.target.closest('a[href]'):null;
+    if(!a||typeof window.gtag!=='function')return;
+    var href=a.getAttribute('href')||'';
+    var kind=href.indexOf('tel:')===0?'phone':href.indexOf('mailto:')===0?'email':/^\/contact(?:\/|\?|#|$)/.test(href)?'contact_page':null;
+    if(kind)window.gtag('event','contact_click',{contact_method:kind,page_path:window.location.pathname});
+  });
+})();
+</script>
+</body>
 </html>
